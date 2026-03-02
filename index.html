@@ -1,0 +1,817 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medora — Medical Tourism in Egypt</title>
+    <meta name="description"
+        content="Medora connects international patients with Egypt's finest hospitals, clinics, luxury hotels, and cultural experiences. World-class care, iconic destinations." />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0c2340 0%, #1a3f7a 55%, rgba(15, 170, 110, .12) 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-top: 72px
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('images/hero_hospital.png') center/cover no-repeat;
+            opacity: .22
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(12, 35, 64, .92) 0%, rgba(12, 35, 64, .45) 60%, transparent 100%)
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 520px;
+            height: 520px;
+            background: radial-gradient(circle, rgba(26, 111, 191, .25) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -100px;
+            right: -60px;
+            z-index: 1;
+            animation: floatBlob 9s ease-in-out infinite
+        }
+
+        .hero-glow2 {
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(15, 170, 110, .18) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: 8%;
+            left: 4%;
+            z-index: 1;
+            animation: floatBlob 11s ease-in-out infinite reverse
+        }
+
+        @keyframes floatBlob {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-28px)
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 4rem 0;
+            max-width: 660px
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: rgba(255, 255, 255, .1);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, .18);
+            padding: .38rem 1.1rem;
+            border-radius: 50px;
+            color: rgba(255, 255, 255, .9);
+            font-size: .8rem;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            margin-bottom: 1.4rem
+        }
+
+        .hero-eyebrow .dot {
+            width: 7px;
+            height: 7px;
+            background: var(--clr-accent);
+            border-radius: 50%;
+            animation: blink 1.5s infinite
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .3
+            }
+        }
+
+        .hero-content h1 {
+            color: #fff;
+            margin-bottom: 1.2rem;
+            font-family: var(--font-serif)
+        }
+
+        .hero-content h1 em {
+            font-style: normal;
+            color: var(--clr-accent)
+        }
+
+        .hero-content p {
+            color: rgba(255, 255, 255, .8);
+            font-size: 1.08rem;
+            margin-bottom: 2rem;
+            max-width: 540px
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.8rem
+        }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            flex-wrap: wrap
+        }
+
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: .4rem;
+            color: rgba(255, 255, 255, .7);
+            font-size: .8rem
+        }
+
+        .hero-trust-item svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--clr-accent)
+        }
+
+        .hero-floatcards {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem
+        }
+
+        .hero-fcard {
+            background: rgba(255, 255, 255, .1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, .2);
+            border-radius: var(--radius-md);
+            padding: 1.1rem 1.6rem;
+            text-align: center;
+            min-width: 158px
+        }
+
+        .hero-fcard .big {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #fff
+        }
+
+        .hero-fcard .label {
+            font-size: .72rem;
+            color: rgba(255, 255, 255, .62)
+        }
+
+        .pyramid-deco {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 1.8rem
+        }
+
+        .pyramid-deco span {
+            background: rgba(255, 255, 255, .15);
+            display: block
+        }
+
+        .pd1 {
+            width: 8px;
+            height: 18px;
+            border-radius: 2px 2px 0 0
+        }
+
+        .pd2 {
+            width: 12px;
+            height: 28px;
+            border-radius: 2px 2px 0 0
+        }
+
+        .pd3 {
+            width: 18px;
+            height: 42px;
+            border-radius: 3px 3px 0 0;
+            background: rgba(212, 160, 23, .35) !important
+        }
+
+        .pd4 {
+            width: 12px;
+            height: 28px;
+            border-radius: 2px 2px 0 0
+        }
+
+        .pd5 {
+            width: 8px;
+            height: 18px;
+            border-radius: 2px 2px 0 0
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid var(--clr-border);
+            transition: var(--transition);
+            cursor: pointer
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--clr-primary)
+        }
+
+        .service-card:hover .feature-icon {
+            background: var(--clr-primary)
+        }
+
+        .service-card:hover .feature-icon svg {
+            stroke: #fff
+        }
+
+        .why-medora {
+            background: linear-gradient(135deg, #0c2340 0%, #153464 100%);
+            padding: 5rem 0
+        }
+
+        .why-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            padding: 1.4rem;
+            background: rgba(255, 255, 255, .06);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, .1);
+            transition: var(--transition)
+        }
+
+        .why-feature:hover {
+            background: rgba(255, 255, 255, .1)
+        }
+
+        .why-feature .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, .1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        .why-feature .icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--clr-accent)
+        }
+
+        .why-feature h4 {
+            color: #fff;
+            margin-bottom: .25rem
+        }
+
+        .why-feature p {
+            color: rgba(255, 255, 255, .62);
+            font-size: .86rem
+        }
+
+        .pkg-bar {
+            width: 100%;
+            height: 5px;
+            border-radius: 3px;
+            background: var(--clr-border);
+            overflow: hidden;
+            margin: .9rem 0
+        }
+
+        .pkg-bar .fill {
+            height: 100%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent))
+        }
+
+        @media(max-width:1024px) {
+            .hero-floatcards {
+                display: none
+            }
+        }
+
+        @media(max-width:768px) {
+            .hero {
+                min-height: unset;
+                padding: 3rem 0
+            }
+
+            .hero-content {
+                padding: 2rem 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="egypt-strip"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Medora Medical Tourism" style="height:64px;width:auto;display:block" /></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="hospitals.html">Hospitals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:.75rem" class="hide-mobile">
+                <a href="index-ar.html" class="lang-switcher">🌐 العربية</a>
+                <a href="https://wa.me/201000000000" target="_blank" class="btn btn-accent btn-sm">💬 WhatsApp</a>
+                <a href="contact.html" class="btn btn-primary btn-sm">Free Quote</a>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a><a href="treatments.html">Treatments</a><a href="packages.html">Packages</a>
+        <a href="destinations.html">Destinations</a><a href="hospitals.html">Hospitals</a>
+        <a href="about.html">About</a><a href="contact.html">Contact</a>
+        <a href="index-ar.html">🌐 العربية</a>
+        <a href="contact.html" class="btn btn-primary" style="text-align:center">Get Free Quote</a>
+    </div>
+
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-glow2"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="pyramid-deco"><span class="pd1"></span><span class="pd2"></span><span
+                        class="pd3"></span><span class="pd4"></span><span class="pd5"></span></div>
+                <div class="hero-eyebrow"><span class="dot"></span>Egypt's Premier Medical Tourism Platform</div>
+                <h1>Heal in Egypt,<br /><em>Experience</em> Its Wonders</h1>
+                <p>World-class medical care at Egypt's top JCI-accredited hospitals — combined with iconic destinations,
+                    luxury hotels, and private transfers.</p>
+                <div class="hero-actions">
+                    <a href="packages.html" class="btn btn-accent btn-lg">Explore Packages</a>
+                    <a href="contact.html" class="btn btn-outline-white btn-lg">Free Consultation</a>
+                </div>
+                <div class="hero-trust">
+                    <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>JCI-Accredited Hospitals</div>
+                    <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>Fully Insured Packages</div>
+                    <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>Multilingual Support</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-floatcards">
+            <div class="hero-fcard">
+                <div class="big">50%</div>
+                <div class="label">Average Cost Saving</div>
+            </div>
+            <div class="hero-fcard">
+                <div class="big">8K+</div>
+                <div class="label">Patients Treated</div>
+            </div>
+            <div class="hero-fcard">
+                <div class="big">100%</div>
+                <div class="label">Personalised Plans</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item"><span class="number">8,000+</span><span class="label">International
+                        Patients</span></div>
+                <div class="stat-item"><span class="number">30+</span><span class="label">Partner Hospitals</span></div>
+                <div class="stat-item"><span class="number">8</span><span class="label">Egyptian Cities</span></div>
+                <div class="stat-item"><span class="number">97%</span><span class="label">Satisfaction Rate</span></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What Medora Offers</span>
+                <h2>Everything You Need <span class="text-primary">In One Package</span></h2>
+                <p>From your first virtual consultation to your safe journey home — Medora manages every detail.</p>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="service-card">
+                    <div class="feature-icon" style="margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg></div>
+                    <h4>Medical Treatments</h4>
+                    <p style="font-size:.86rem">Dental, cosmetic, orthopedic, ophthalmology, fertility, cardiac, and
+                        wellness — all at Egypt's finest clinics.</p>
+                </div>
+                <div class="service-card">
+                    <div class="feature-icon" style="margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        </svg></div>
+                    <h4>Luxury Hotels</h4>
+                    <p style="font-size:.86rem">Curated 4 &amp; 5-star hotels next to top hospitals in Cairo, Hurghada,
+                        Sharm El Sheikh, and beyond.</p>
+                </div>
+                <div class="service-card">
+                    <div class="feature-icon" style="margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="3" width="15" height="13" />
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                            <circle cx="5.5" cy="18.5" r="2.5" />
+                            <circle cx="18.5" cy="18.5" r="2.5" />
+                        </svg></div>
+                    <h4>Private Transfers</h4>
+                    <p style="font-size:.86rem">VIP airport pickup, clinic transfers, and intercity transport — fully
+                        arranged before you arrive.</p>
+                </div>
+                <div class="service-card">
+                    <div class="feature-icon accent" style="margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10z" />
+                        </svg></div>
+                    <h4>Cultural &amp; Wellness Tours</h4>
+                    <p style="font-size:.86rem">Pyramids, Luxor temples, Red Sea snorkelling, Nile cruises — curated
+                        around your recovery schedule.</p>
+                </div>
+                <div class="service-card">
+                    <div class="feature-icon accent" style="margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg></div>
+                    <h4>24/7 Arabic &amp; English Support</h4>
+                    <p style="font-size:.86rem">Dedicated bilingual coordinators available any time to assist you
+                        before, during, and after your trip.</p>
+                </div>
+                <div class="service-card">
+                    <div class="feature-icon gold" style="margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg></div>
+                    <h4>Visa &amp; Documentation</h4>
+                    <p style="font-size:.86rem">Egypt medical visa assistance, insurance letters, and hospital
+                        pre-approval — handled by our team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-medora">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.85)">Why
+                    Choose Medora</span>
+                <h2 style="color:#fff">Egypt's Most <em style="font-style:normal;color:var(--clr-accent)">Trusted</em>
+                    Medical Tourism Partner</h2>
+                <p style="color:rgba(255,255,255,.68)">We know Egypt's healthcare system inside-out — giving you the
+                    best care at the best price.</p>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-2" style="gap:1.1rem">
+                <div class="why-feature">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg></div>
+                    <div>
+                        <h4>JCI &amp; GAHAR-Accredited</h4>
+                        <p>All partners hold Egyptian GAHAR and Joint Commission International standards — the highest
+                            bar in global healthcare.</p>
+                    </div>
+                </div>
+                <div class="why-feature">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg></div>
+                    <div>
+                        <h4>Save up to 60–70%</h4>
+                        <p>World-class Egyptian specialists deliver identical outcomes at a fraction of European or Gulf
+                            prices.</p>
+                    </div>
+                </div>
+                <div class="why-feature">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg></div>
+                    <div>
+                        <h4>No Waiting Lists</h4>
+                        <p>Book your procedure for next week. Egypt's private hospitals offer near-immediate scheduling
+                            for international patients.</p>
+                    </div>
+                </div>
+                <div class="why-feature">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10z" />
+                        </svg></div>
+                    <div>
+                        <h4>Explorer's Recovery</h4>
+                        <p>Spend your healing days at the Pyramids, the Red Sea, or the Nile — the world's most
+                            extraordinary recuperation setting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label accent">Featured</span>
+                <h2>Medora's Most-Booked <span class="text-primary">Packages</span></h2>
+                <p>Treatment + luxury hotel + private transfer + optional Egypt tour — all in one transparent price.</p>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-img"
+                        style="background:linear-gradient(135deg,#e8f2fd,#ddf6ee);display:flex;align-items:center;justify-content:center;font-size:4.5rem">
+                        🦷</div>
+                    <div class="card-body"><span class="card-badge">🦷 Dental · Cairo</span>
+                        <h3 style="font-size:1.1rem;margin-bottom:.4rem">Nile Smile — Full Dental Makeover</h3>
+                        <p style="font-size:.83rem">E-max veneers, implants + 7 nights Fairmont Nile City + Pyramids
+                            tour.</p>
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin:.75rem 0"><span class="tag">8
+                                Days</span><span class="tag green">Save 75%</span></div>
+                        <div class="pkg-bar">
+                            <div class="fill" style="width:88%"></div>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--clr-slate);margin-bottom:.5rem">
+                            <span>Treatment · Hotel · Transfer · Tour</span><span
+                                style="color:var(--clr-accent);font-weight:700">88% Booked</span></div>
+                        <div style="display:flex;align-items:baseline;gap:.35rem"><span
+                                style="font-size:.78rem;color:var(--clr-slate)">from</span><span
+                                style="font-size:1.45rem;font-weight:800;color:var(--clr-primary)">$1,490</span></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stars">★★★★★</div><a href="packages.html" class="btn btn-primary btn-sm">View
+                            Package</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"
+                        style="background:linear-gradient(135deg,#fce7f3,#ede9fe);display:flex;align-items:center;justify-content:center;font-size:4.5rem">
+                        ✨</div>
+                    <div class="card-body"><span class="card-badge" style="background:#fce7f3;color:#be185d">✨ Cosmetic
+                            · Hurghada</span>
+                        <h3 style="font-size:1.1rem;margin-bottom:.4rem">Red Sea Radiance — Cosmetic Surgery</h3>
+                        <p style="font-size:.83rem">Rhinoplasty or liposuction + 12 nights Steigenberger Aqua Magic
+                            resort.</p>
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin:.75rem 0"><span class="tag">14
+                                Days</span><span class="tag green">Save 70%</span></div>
+                        <div class="pkg-bar">
+                            <div class="fill" style="width:74%"></div>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--clr-slate);margin-bottom:.5rem">
+                            <span>Surgery · Resort · Transfer · Diving</span><span
+                                style="color:var(--clr-accent);font-weight:700">74% Booked</span></div>
+                        <div style="display:flex;align-items:baseline;gap:.35rem"><span
+                                style="font-size:.78rem;color:var(--clr-slate)">from</span><span
+                                style="font-size:1.45rem;font-weight:800;color:var(--clr-primary)">$2,890</span></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stars">★★★★★</div><a href="packages.html" class="btn btn-primary btn-sm">View
+                            Package</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"
+                        style="background:linear-gradient(135deg,#d1fae5,#e0e7ff);display:flex;align-items:center;justify-content:center;font-size:4.5rem">
+                        🦴</div>
+                    <div class="card-body"><span class="card-badge green">🦴 Orthopedic · Cairo</span>
+                        <h3 style="font-size:1.1rem;margin-bottom:.4rem">Royal Motion — Knee/Hip Replacement</h3>
+                        <p style="font-size:.83rem">Total joint surgery + physio + 21 nights Marriott Mena House with
+                            Pyramid views.</p>
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin:.75rem 0"><span class="tag">24
+                                Days</span><span class="tag green">Save 65%</span></div>
+                        <div class="pkg-bar">
+                            <div class="fill" style="width:62%"></div>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--clr-slate);margin-bottom:.5rem">
+                            <span>Surgery · Hotel · Physio · Nile Tour</span><span
+                                style="color:var(--clr-primary);font-weight:700">62% Booked</span></div>
+                        <div style="display:flex;align-items:baseline;gap:.35rem"><span
+                                style="font-size:.78rem;color:var(--clr-slate)">from</span><span
+                                style="font-size:1.45rem;font-weight:800;color:var(--clr-primary)">$4,200</span></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stars">★★★★☆</div><a href="packages.html" class="btn btn-primary btn-sm">View
+                            Package</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:2.5rem"><a href="packages.html" class="btn btn-outline">View All
+                    Packages →</a></div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">How It Works</span>
+                <h2>Your Journey With <span class="text-primary">Medora</span></h2>
+                <p>Six simple steps — from your first enquiry to your safe return home.</p>
+                <div class="divider"></div>
+            </div>
+            <div class="journey-steps">
+                <div class="journey-step">
+                    <div class="journey-number">1</div>
+                    <h4>Free Consultation</h4>
+                    <p>Tell us your needs — we build a personalised plan.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-number">2</div>
+                    <h4>Choose Package</h4>
+                    <p>Select treatment, hotel, and optional tours.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-number">3</div>
+                    <h4>Visa &amp; Travel Prep</h4>
+                    <p>We handle your medical visa and flight advice.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-number">4</div>
+                    <h4>Arrive in Egypt</h4>
+                    <p>VIP airport welcome and hotel check-in.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-number">5</div>
+                    <h4>Treatment</h4>
+                    <p>Procedure by certified specialists + recovery care.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-number">6</div>
+                    <h4>Explore &amp; Return</h4>
+                    <p>Optional tours, then safe journey home.</p>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:2.5rem"><a href="contact.html" class="btn btn-primary btn-lg">Start
+                    My Journey →</a></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label gold">Iconic Egypt</span>
+                <h2>Destinations Where You'll <span class="text-primary">Heal &amp; Explore</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-4">
+                <div class="city-card" style="background:linear-gradient(135deg,#0c2340,#1a4a8f)">
+                    <div
+                        style="width:100%;height:100%;background:linear-gradient(135deg,#0c2340,#1a6fbf);display:flex;align-items:center;justify-content:center;font-size:5rem;position:absolute">
+                        🏙️</div>
+                    <div class="city-overlay"><span class="city-tag">🏥 Medical Hub</span>
+                        <h3>Cairo</h3>
+                        <p>Hospitals • Pyramids • Nile</p>
+                    </div>
+                </div>
+                <div class="city-card" style="background:linear-gradient(135deg,#004e92,#000428)">
+                    <div
+                        style="width:100%;height:100%;position:absolute;display:flex;align-items:center;justify-content:center;font-size:5rem;background:linear-gradient(135deg,#006994,#00a8e8)">
+                        🐠</div>
+                    <div class="city-overlay"><span class="city-tag">🌊 Red Sea</span>
+                        <h3>Hurghada</h3>
+                        <p>Diving • Recovery Resorts</p>
+                    </div>
+                </div>
+                <div class="city-card" style="background:linear-gradient(135deg,#1a472a,#2d6a4f)">
+                    <div
+                        style="width:100%;height:100%;position:absolute;display:flex;align-items:center;justify-content:center;font-size:5rem;background:linear-gradient(135deg,#0d5c3a,#1a8f5e)">
+                        🏖️</div>
+                    <div class="city-overlay"><span class="city-tag">🌅 Beach</span>
+                        <h3>Sharm El Sheikh</h3>
+                        <p>Spa • Coral Reef • Wellness</p>
+                    </div>
+                </div>
+                <div class="city-card" style="background:linear-gradient(135deg,#92400e,#d97706)">
+                    <div
+                        style="width:100%;height:100%;position:absolute;display:flex;align-items:center;justify-content:center;font-size:5rem;background:linear-gradient(135deg,#a35c0c,#d97706)">
+                        🏛️</div>
+                    <div class="city-overlay"><span class="city-tag">🏺 Ancient</span>
+                        <h3>Luxor</h3>
+                        <p>Temples • Hot Air Balloons</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:2rem"><a href="destinations.html" class="btn btn-outline">All 8
+                    Destinations →</a></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap"><img src="images/logo.png" alt="Medora" style="height:52px;width:auto;filter:brightness(0) invert(1)" /></div>
+                    <p>Egypt's premier medical tourism platform.</p>
+                    <div class="social-links"><a href="#">f</a><a href="#">in</a><a href="#">𝕏</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="treatments.html">Treatments</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="hospitals.html">Hospitals</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Packages</h4>
+                    <ul>
+                        <li><a href="packages.html">Nile Smile — Dental</a></li>
+                        <li><a href="packages.html">Red Sea Radiance — Cosmetic</a></li>
+                        <li><a href="packages.html">Royal Motion — Orthopedic</a></li>
+                        <li><a href="packages.html">Clear Vision — Eye</a></li>
+                        <li><a href="packages.html">Sinai Serenity — Wellness</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="rgba(255,255,255,.5)" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg><span>care@medoraegypt.com</span></div><a href="https://wa.me/201000000000"
+                        class="btn btn-accent btn-sm" style="margin-top:.75rem;border-radius:8px" target="_blank">💬
+                        WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 Medora Medical Tourism. All rights reserved.</span><a
+                    href="index-ar.html" style="color:rgba(255,255,255,.5)">العربية</a></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><svg
+            viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg></a>
+    <script>window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20) }); function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open') }</script>
+</body>
+
+</html>

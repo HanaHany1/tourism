@@ -1,0 +1,504 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Medora — Medical Tourism Egypt</title>
+    <meta name="description"
+        content="Learn about Medora's mission to provide world-class medical tourism in Egypt — combining excellent healthcare with iconic Egyptian destinations." />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .about-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center
+        }
+
+        .about-img-box {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 440px;
+            background: linear-gradient(135deg, var(--clr-primary-light), var(--clr-accent-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12rem;
+            position: relative
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            background: #fff;
+            border-radius: var(--radius-md);
+            padding: 1rem 1.4rem;
+            box-shadow: var(--shadow-lg)
+        }
+
+        .about-badge .n {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--clr-primary)
+        }
+
+        .about-badge .l {
+            font-size: .75rem;
+            color: var(--clr-slate)
+        }
+
+        .value-card {
+            padding: 1.75rem;
+            background: #fff;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--clr-border);
+            text-align: center;
+            transition: var(--transition)
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--clr-primary)
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.6rem
+        }
+
+        .timeline {
+            padding-left: 2.5rem;
+            position: relative;
+            max-width: 680px;
+            margin: 0 auto
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: .8rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--clr-primary), var(--clr-accent));
+            border-radius: 2px
+        }
+
+        .tl-item {
+            position: relative;
+            margin-bottom: 2.5rem
+        }
+
+        .tl-dot {
+            position: absolute;
+            left: -2.5rem;
+            top: .35rem;
+            width: 18px;
+            height: 18px;
+            background: var(--clr-accent);
+            border: 3px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px var(--clr-accent-light)
+        }
+
+        .tl-year {
+            font-size: .72rem;
+            font-weight: 700;
+            color: var(--clr-primary);
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            margin-bottom: .25rem
+        }
+
+        .tl-item h4 {
+            margin-bottom: .2rem
+        }
+
+        .tl-item p {
+            font-size: .84rem
+        }
+
+        .team-card {
+            background: #fff;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--clr-border);
+            text-align: center;
+            transition: var(--transition)
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg)
+        }
+
+        .team-av {
+            height: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.8rem
+        }
+
+        .team-body {
+            padding: 1.2rem
+        }
+
+        .team-body h4 {
+            font-size: .98rem;
+            margin-bottom: .2rem
+        }
+
+        .team-body .role {
+            font-size: .78rem;
+            color: var(--clr-primary);
+            font-weight: 600;
+            margin-bottom: .4rem
+        }
+
+        @media(max-width:768px) {
+            .about-split {
+                grid-template-columns: 1fr
+            }
+
+            .about-img-box {
+                height: 260px;
+                font-size: 7rem
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="egypt-strip"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Medora Medical Tourism" style="height:64px;width:auto;display:block" /></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="hospitals.html">Hospitals</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:.75rem" class="hide-mobile"><a href="about-ar.html"
+                    class="lang-switcher">🌐 العربية</a><a href="https://wa.me/201000000000" target="_blank"
+                    class="btn btn-accent btn-sm">💬 WhatsApp</a><a href="contact.html"
+                    class="btn btn-primary btn-sm">Free Quote</a></div>
+            <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="treatments.html">Treatments</a><a
+            href="packages.html">Packages</a><a href="destinations.html">Destinations</a><a
+            href="hospitals.html">Hospitals</a><a href="about.html">About</a><a href="contact.html">Contact</a><a
+            href="about-ar.html">🌐 العربية</a><a href="contact.html" class="btn btn-primary"
+            style="text-align:center">Free Quote</a></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span class="current">About
+                        Medora</span></div>
+                <h1 class="serif">About Medora</h1>
+                <p>Born in Egypt. Built for the world. Medora connects international patients with Egypt's finest
+                    healthcare — surrounded by 5,000 years of wonder.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="about-split">
+                <div class="about-img-box">🏺<div class="about-badge">
+                        <div class="n">2016</div>
+                        <div class="l">Founded in Cairo, Egypt</div>
+                    </div>
+                </div>
+                <div>
+                    <span class="section-label" style="margin-bottom:1.2rem;display:inline-flex">Our Story</span>
+                    <h2 style="margin-bottom:1.1rem">Exceptional Healthcare.<br /><span
+                            class="text-primary">Extraordinary Egypt.</span></h2>
+                    <p style="font-size:1rem;line-height:1.85;margin-bottom:1.2rem">Medora was founded in Cairo in 2016
+                        by a team of Egyptian medical professionals, international patient coordinators, and travel
+                        specialists who saw a clear opportunity: <strong style="color:var(--clr-navy)">Egypt's hospitals
+                            were world-class — but the world didn't know it yet.</strong></p>
+                    <p style="font-size:1rem;line-height:1.85;margin-bottom:2rem">Today, Medora has helped over 8,000
+                        patients from 60+ countries receive life-changing medical treatments in Egypt — and discover its
+                        ancient wonders along the way.</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.1rem">
+                        <div style="padding:1.2rem;background:var(--clr-primary-light);border-radius:var(--radius-sm)">
+                            <strong style="color:var(--clr-primary);font-size:1.4rem;display:block">🎯 Mission</strong>
+                            <p style="font-size:.85rem;margin-top:.45rem">To make Egypt the world's most trusted medical
+                                tourism destination — where exceptional care meets extraordinary culture.</p>
+                        </div>
+                        <div style="padding:1.2rem;background:var(--clr-accent-light);border-radius:var(--radius-sm)">
+                            <strong style="color:var(--clr-accent-dark);font-size:1.4rem;display:block">🔭
+                                Vision</strong>
+                            <p style="font-size:.85rem;margin-top:.45rem">A world where every patient can access
+                                world-class healthcare in Egypt — affordable, safe, and deeply memorable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header"><span class="section-label">Our Values</span>
+                <h2>What <span class="text-primary">Drives Us</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="value-card">
+                    <div class="value-icon">🛡️</div>
+                    <h4>Safety Above All</h4>
+                    <p>Every Medora partner hospital holds GAHAR accreditation — Egypt's national standard equivalent to
+                        JCI. We never compromise on patient safety.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💎</div>
+                    <h4>Genuine Quality</h4>
+                    <p>We personally inspect every partner hospital, verify outcomes data, and track patient
+                        satisfaction continuously — not just at sign-up.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h4>Egyptian Warmth</h4>
+                    <p>We leverage Egypt's legendary hospitality culture to deliver a patient experience that feels like
+                        being cared for by family.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔍</div>
+                    <h4>Radical Transparency</h4>
+                    <p>Every price is all-inclusive and itemised. No hidden fees, no surprise extras, no hard sales —
+                        ever.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h4>Global Access</h4>
+                    <p>We support patients in 15+ languages and work with partners in Europe, the Gulf, and Africa to
+                        ensure seamless access to care.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🏺</div>
+                    <h4>Pride in Egypt</h4>
+                    <p>We are Egyptian-founded and proudly promote our country's world-class medical talent, culture,
+                        and extraordinary heritage to the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header"><span class="section-label">Our Journey</span>
+                <h2>Medora's <span class="text-primary">Milestones</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="timeline">
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2016</div>
+                    <h4>Founded in Cairo</h4>
+                    <p>Started with 5 partner hospitals in Cairo and a team of 10. Focused on dental and cosmetic
+                        surgery for Gulf and European patients.</p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2018</div>
+                    <h4>Red Sea Expansion</h4>
+                    <p>Launched Hurghada and Sharm El Sheikh operations. 1,000-patient milestone reached. Partnership
+                        with Steigenberger and Four Seasons hotels sealed.</p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2020</div>
+                    <h4>GAHAR Audit Programme</h4>
+                    <p>Established Medora's exclusive GAHAR quality audit protocol — the first Egyptian medical tourism
+                        facilitator to publish its own public outcomes data.</p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2022</div>
+                    <h4>Upper Egypt Destinations</h4>
+                    <p>Added Luxor and Aswan packages featuring Nile cruise recovery programs. Integrated telemedicine
+                        aftercare portal for all Medora patients.</p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2024</div>
+                    <h4>WMTA Recognition</h4>
+                    <p>Listed in the World Medical Tourism Alliance's Top 100 facilitators. Reached 6,000 patients
+                        served. Opened European liaison offices in London &amp; Düsseldorf.</p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2026</div>
+                    <h4>8,000+ Patients &amp; 30+ Hospitals</h4>
+                    <p>Expanded to Fayoum and Ain Sokhna. Medora now covers 8 Egyptian cities, 30+ hospitals, and
+                        supports patients from 60+ countries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header"><span class="section-label">Leadership</span>
+                <h2>The <span class="text-primary">Medora Team</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-4">
+                <div class="team-card">
+                    <div class="team-av"
+                        style="background:linear-gradient(135deg,var(--clr-primary-light),var(--clr-accent-light))">
+                        👨‍⚕️</div>
+                    <div class="team-body">
+                        <h4>Dr. Karim Naguib Fahmy</h4>
+                        <div class="role">CEO &amp; Co-Founder</div>
+                        <p style="font-size:.78rem;color:var(--clr-slate)">Former Head of International Patients at Dar
+                            Al Fouad. MBA Cairo AUC, MD Ain Shams University.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-av" style="background:linear-gradient(135deg,#fce7f3,#ede9fe)">👩‍💼</div>
+                    <div class="team-body">
+                        <h4>Sarah El-Masry</h4>
+                        <div class="role">Chief Operations Officer</div>
+                        <p style="font-size:.78rem;color:var(--clr-slate)">12 years in medical travel. Former Global
+                            Patient Services Manager at As-Salam International Hospital.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-av" style="background:linear-gradient(135deg,var(--clr-accent-light),#d1fae5)">
+                        👨‍💼</div>
+                    <div class="team-body">
+                        <h4>Omar Shawkat Tawfiq</h4>
+                        <div class="role">Head of Hospital Quality</div>
+                        <p style="font-size:.78rem;color:var(--clr-slate)">GAHAR-certified auditor. Personally inspects
+                            all 30+ Medora partner facilities annually.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-av"
+                        style="background:linear-gradient(135deg,var(--clr-gold-light),var(--clr-primary-light))">👩‍⚕️
+                    </div>
+                    <div class="team-body">
+                        <h4>Dr. Laila Mostafa Eid</h4>
+                        <div class="role">Patient Care Director</div>
+                        <p style="font-size:.78rem;color:var(--clr-slate)">Bilingual surgeon and patient advocate.
+                            Oversees all complex care pathways and post-op aftercare programs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-gradient-blue" style="padding:3.5rem 0">
+        <div class="container">
+            <h2 style="color:#fff;text-align:center;margin-bottom:2.5rem">Our <span
+                    style="color:var(--clr-accent)">Accreditations</span> &amp; Memberships</h2>
+            <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:3rem">
+                <div style="text-align:center;color:#fff">
+                    <div style="font-size:2.5rem;margin-bottom:.5rem">🏅</div><strong
+                        style="display:block;font-size:.88rem">WMTA Member</strong><span
+                        style="font-size:.72rem;opacity:.65">World Medical Tourism Alliance</span>
+                </div>
+                <div style="text-align:center;color:#fff">
+                    <div style="font-size:2.5rem;margin-bottom:.5rem">🏛️</div><strong
+                        style="display:block;font-size:.88rem">GAHAR Auditor</strong><span
+                        style="font-size:.72rem;opacity:.65">Egyptian Healthcare Accreditation</span>
+                </div>
+                <div style="text-align:center;color:#fff">
+                    <div style="font-size:2.5rem;margin-bottom:.5rem">🔒</div><strong
+                        style="display:block;font-size:.88rem">ISO 27001</strong><span
+                        style="font-size:.72rem;opacity:.65">Data Privacy Certified</span>
+                </div>
+                <div style="text-align:center;color:#fff">
+                    <div style="font-size:2.5rem;margin-bottom:.5rem">🌐</div><strong
+                        style="display:block;font-size:.88rem">IMTJ Award 2024</strong><span
+                        style="font-size:.72rem;opacity:.65">Best Patient Services — Egypt</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="text-align:center;max-width:660px"><span class="section-label accent"
+                style="margin-bottom:1.2rem;display:inline-flex">Ready to Start?</span>
+            <h2>Begin Your Medora <span class="text-primary">Journey Today</span></h2>
+            <p style="margin:1.2rem auto 2rem;font-size:1.05rem">Speak with an Egyptian medical coordinator — no
+                obligation, no pressure, just honest guidance.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap"><a href="contact.html"
+                    class="btn btn-primary btn-lg">Get Free Consultation</a><a href="packages.html"
+                    class="btn btn-outline btn-lg">Browse Packages</a></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap"><img src="images/logo.png" alt="Medora" style="height:52px;width:auto;filter:brightness(0) invert(1)" /></div>
+                    <p>Egypt's premier medical tourism platform.</p>
+                    <div class="social-links"><a href="#">f</a><a href="#">in</a><a href="#">𝕏</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="treatments.html">Treatments</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="hospitals.html">Hospitals</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Destinations</h4>
+                    <ul>
+                        <li><a href="destinations.html">Cairo</a></li>
+                        <li><a href="destinations.html">Hurghada</a></li>
+                        <li><a href="destinations.html">Sharm El Sheikh</a></li>
+                        <li><a href="destinations.html">Luxor</a></li>
+                        <li><a href="destinations.html">Aswan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="rgba(255,255,255,.5)" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg><span>care@medoraegypt.com</span></div><a href="https://wa.me/201000000000"
+                        class="btn btn-accent btn-sm" style="margin-top:.75rem;border-radius:8px" target="_blank">💬
+                        WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 Medora Medical Tourism. All rights reserved.</span><a
+                    href="about-ar.html" style="color:rgba(255,255,255,.5)">العربية</a></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><svg
+            viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg></a>
+    <script>window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20) }); function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open') }</script>
+</body>
+
+</html>

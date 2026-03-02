@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ميدورا — السياحة الطبية في مصر</title>
+    <meta name="description"
+        content="ميدورا تربط المرضى الدوليين بأفضل المستشفيات المصرية. رعاية طبية عالمية مع وجهات أيقونية وفنادق فاخرة." />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif
+        }
+
+        .hero {
+            min-height: 92vh;
+            background: linear-gradient(135deg, #0c2340, #1a3f7a 55%, rgba(15, 170, 110, .12));
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-top: 72px
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('images/hero_hospital.png') center/cover;
+            opacity: .2
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to left, rgba(12, 35, 64, .9), rgba(12, 35, 64, .4) 60%, transparent)
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 4rem 0;
+            max-width: 660px;
+            margin-right: auto
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .18);
+            padding: .38rem 1.1rem;
+            border-radius: 50px;
+            color: rgba(255, 255, 255, .9);
+            font-size: .85rem;
+            font-weight: 700;
+            margin-bottom: 1.4rem
+        }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            background: var(--clr-accent);
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+            display: inline-block
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .3
+            }
+        }
+
+        .hero-content h1 {
+            color: #fff;
+            margin-bottom: 1.2rem;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 800
+        }
+
+        .hero-content h1 em {
+            font-style: normal;
+            color: var(--clr-accent)
+        }
+
+        .hero-content p {
+            color: rgba(255, 255, 255, .8);
+            font-size: 1.05rem;
+            margin-bottom: 2rem
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem
+        }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            flex-wrap: wrap
+        }
+
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: .4rem;
+            color: rgba(255, 255, 255, .7);
+            font-size: .82rem
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid var(--clr-border);
+            transition: var(--transition)
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--clr-primary)
+        }
+
+        .why-section {
+            background: linear-gradient(135deg, #0c2340, #153464);
+            padding: 5rem 0
+        }
+
+        .why-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            padding: 1.4rem;
+            background: rgba(255, 255, 255, .06);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, .1);
+            transition: var(--transition)
+        }
+
+        .why-feature:hover {
+            background: rgba(255, 255, 255, .1)
+        }
+
+        .why-feature .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, .1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        .why-feature .icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--clr-accent)
+        }
+
+        .why-feature h4 {
+            color: #fff;
+            margin-bottom: .25rem
+        }
+
+        .why-feature p {
+            color: rgba(255, 255, 255, .62);
+            font-size: .86rem
+        }
+    </style>
+</head>
+
+<body>
+    <div class="egypt-strip"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index-ar.html" class="nav-logo"><img src="images/logo.png" alt="Medora Medical Tourism" style="height:64px;width:auto;display:block" /></a>
+            <ul class="nav-links">
+                <li><a href="index-ar.html" class="active">الرئيسية</a></li>
+                <li><a href="treatments-ar.html">العلاجات</a></li>
+                <li><a href="packages-ar.html">الباقات</a></li>
+                <li><a href="destinations-ar.html">الوجهات</a></li>
+                <li><a href="hospitals-ar.html">المستشفيات</a></li>
+                <li><a href="about-ar.html">من نحن</a></li>
+                <li><a href="contact-ar.html">اتصل بنا</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:.75rem" class="hide-mobile"><a href="index.html"
+                    class="lang-switcher">🌐 English</a><a href="https://wa.me/201000000000" target="_blank"
+                    class="btn btn-accent btn-sm">💬 واتساب</a><a href="contact-ar.html"
+                    class="btn btn-primary btn-sm">استشارة مجانية</a></div>
+            <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index-ar.html">الرئيسية</a><a
+            href="treatments-ar.html">العلاجات</a><a href="packages-ar.html">الباقات</a><a
+            href="destinations-ar.html">الوجهات</a><a href="hospitals-ar.html">المستشفيات</a><a href="about-ar.html">من
+            نحن</a><a href="contact-ar.html">اتصل بنا</a><a href="index.html">🌐 English</a><a href="contact-ar.html"
+            class="btn btn-primary" style="text-align:center">استشارة مجانية</a></div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-eyebrow"><span class="dot"></span>المنصة الرائدة للسياحة الطبية في مصر</div>
+                <h1>اشفَ في مصر،<br /><em>واكتشف</em> عجائبها</h1>
+                <p>رعاية طبية عالمية في أفضل المستشفيات المصرية المعتمدة دوليًا — مع وجهات أيقونية وفنادق فاخرة
+                    وانتقالات خاصة.</p>
+                <div class="hero-actions"><a href="packages-ar.html" class="btn btn-accent btn-lg">استكشف الباقات</a><a
+                        href="contact-ar.html" class="btn btn-outline-white btn-lg">استشارة مجانية</a></div>
+                <div class="hero-trust">
+                    <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>مستشفيات معتمدة دوليًا</div>
+                    <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>باقات مؤمّنة بالكامل</div>
+                    <div class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                        </svg>دعم عربي 24/7</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item"><span class="number">+8,000</span><span class="label">مريض دولي تمت خدمته</span>
+                </div>
+                <div class="stat-item"><span class="number">+30</span><span class="label">مستشفى شريك</span></div>
+                <div class="stat-item"><span class="number">8</span><span class="label">مدن مصرية</span></div>
+                <div class="stat-item"><span class="number">97%</span><span class="label">نسبة الرضا</span></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header"><span class="section-label">ما تقدمه ميدورا</span>
+                <h2>كل ما تحتاجه <span class="text-primary">في باقة واحدة</span></h2>
+                <p>من أول استشارة افتراضية حتى عودتك سالمًا — ميدورا تدير كل التفاصيل.</p>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="service-card">
+                    <div class="feature-icon" style="margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg></div>
+                    <h4>العلاجات الطبية</h4>
+                    <p style="font-size:.86rem">أسنان، تجميل، عظام، عيون، خصوبة، قلب — في أفضل عيادات مصر.</p>
+                </div>
+                <div class="service-card">
+                    <div class="feature-icon" style="margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        </svg></div>
+                    <h4>فنادق فاخرة</h4>
+                    <p style="font-size:.86rem">فنادق 4 و5 نجوم مختارة بجوار أفضل المستشفيات في القاهرة والغردقة وشرم
+                        الشيخ.</p>
+                </div>
+                <div class="service-card">
+                    <div class="feature-icon accent" style="margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10z" />
+                        </svg></div>
+                    <h4>جولات ثقافية وصحية</h4>
+                    <p style="font-size:.86rem">الأهرامات، معابد الأقصر، الغطس في البحر الأحمر، رحلات النيل — مصمّمة حول
+                        جدول تعافيك.</p>
+                </div>
+                <div class="service-card">
+                    <div class="feature-icon accent" style="margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="3" width="15" height="13" />
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                            <circle cx="5.5" cy="18.5" r="2.5" />
+                            <circle cx="18.5" cy="18.5" r="2.5" />
+                        </svg></div>
+                    <h4>نقل خاص</h4>
+                    <p style="font-size:.86rem">استقبال VIP، نقل إلى العيادة وبين المدن — مرتّب قبل وصولك.</p>
+                </div>
+                <div class="service-card">
+                    <div class="feature-icon" style="margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg></div>
+                    <h4>دعم عربي وإنجليزي 24/7</h4>
+                    <p style="font-size:.86rem">منسقون يتحدثون العربية والإنجليزية متاحون في أي وقت قبل رحلتك وأثناءها
+                        وبعدها.</p>
+                </div>
+                <div class="service-card">
+                    <div class="feature-icon gold" style="margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg></div>
+                    <h4>التأشيرة والوثائق</h4>
+                    <p style="font-size:.86rem">مساعدة في التأشيرة الطبية، خطابات التأمين، والموافقة المسبقة من
+                        المستشفى.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-section">
+        <div class="container">
+            <div class="section-header"><span class="section-label"
+                    style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.85)">لماذا تختار ميدورا</span>
+                <h2 style="color:#fff">الشريك <em style="font-style:normal;color:var(--clr-accent)">الأكثر ثقة</em>
+                    للسياحة الطبية في مصر</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-2" style="gap:1.1rem">
+                <div class="why-feature">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg></div>
+                    <div>
+                        <h4>معتمدة JCI وGAHAR</h4>
+                        <p>جميع شركاؤنا يحملون اعتماد GAHAR و JCI — أعلى معايير الرعاية الصحية العالمية.</p>
+                    </div>
+                </div>
+                <div class="why-feature">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg></div>
+                    <div>
+                        <h4>وفّر حتى 70%</h4>
+                        <p>كفاءة طبية مصرية عالمية بجزء من تكلفة أوروبا أو دول الخليج.</p>
+                    </div>
+                </div>
+                <div class="why-feature">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg></div>
+                    <div>
+                        <h4>بلا قوائم انتظار</h4>
+                        <p>احجز إجراءك الأسبوع القادم. مواعيد فورية للمرضى الدوليين.</p>
+                    </div>
+                </div>
+                <div class="why-feature">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10z" />
+                        </svg></div>
+                    <div>
+                        <h4>تعافٍ مع الاستكشاف</h4>
+                        <p>أمضِ أيام تعافيك عند الأهرام، على البحر الأحمر، أو على نهر النيل.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header"><span class="section-label accent">الأكثر حجزًا</span>
+                <h2>باقات ميدورا <span class="text-primary">الأكثر طلبًا</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-img"
+                        style="background:linear-gradient(135deg,#e8f2fd,#ddf6ee);display:flex;align-items:center;justify-content:center;font-size:4rem">
+                        🦷</div>
+                    <div class="card-body"><span class="card-badge">🦷 أسنان · القاهرة</span>
+                        <h3 style="font-size:1.05rem;margin-bottom:.4rem">ابتسامة النيل — تجميل أسنان كامل</h3>
+                        <p style="font-size:.82rem">قشور E-max + 7 ليالٍ فيرمونت النيل + جولة الأهرام.</p>
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin:.75rem 0"><span class="tag">8
+                                أيام</span><span class="tag green">وفّر 75%</span></div>
+                        <div style="display:flex;align-items:baseline;gap:.35rem"><span
+                                style="font-size:.78rem;color:var(--clr-slate)">يبدأ من</span><span
+                                style="font-size:1.4rem;font-weight:800;color:var(--clr-primary)">1,490$</span></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stars">★★★★★</div><a href="packages-ar.html" class="btn btn-primary btn-sm">عرض
+                            الباقة</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"
+                        style="background:linear-gradient(135deg,#fce7f3,#ede9fe);display:flex;align-items:center;justify-content:center;font-size:4rem">
+                        ✨</div>
+                    <div class="card-body"><span class="card-badge" style="background:#fce7f3;color:#be185d">✨ تجميل ·
+                            الغردقة</span>
+                        <h3 style="font-size:1.05rem;margin-bottom:.4rem">بريق البحر الأحمر — جراحة تجميل</h3>
+                        <p style="font-size:.82rem">تجميل الأنف + 12 ليلة منتجع ستيجنبرجر أكوا ماجيك.</p>
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin:.75rem 0"><span class="tag">14
+                                يومًا</span><span class="tag green">وفّر 70%</span></div>
+                        <div style="display:flex;align-items:baseline;gap:.35rem"><span
+                                style="font-size:.78rem;color:var(--clr-slate)">يبدأ من</span><span
+                                style="font-size:1.4rem;font-weight:800;color:var(--clr-primary)">2,890$</span></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stars">★★★★★</div><a href="packages-ar.html" class="btn btn-primary btn-sm">عرض
+                            الباقة</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"
+                        style="background:linear-gradient(135deg,#d1fae5,#e0e7ff);display:flex;align-items:center;justify-content:center;font-size:4rem">
+                        🦴</div>
+                    <div class="card-body"><span class="card-badge green">🦴 عظام · القاهرة</span>
+                        <h3 style="font-size:1.05rem;margin-bottom:.4rem">الحركة الملكية — استبدال مفصل</h3>
+                        <p style="font-size:.82rem">مفصل الركبة/الورك + علاج طبيعي + 21 ليلة ماريوت مينا هاوس.</p>
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin:.75rem 0"><span class="tag">24
+                                يومًا</span><span class="tag green">وفّر 65%</span></div>
+                        <div style="display:flex;align-items:baseline;gap:.35rem"><span
+                                style="font-size:.78rem;color:var(--clr-slate)">يبدأ من</span><span
+                                style="font-size:1.4rem;font-weight:800;color:var(--clr-primary)">4,200$</span></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stars">★★★★☆</div><a href="packages-ar.html" class="btn btn-primary btn-sm">عرض
+                            الباقة</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:2.5rem"><a href="packages-ar.html" class="btn btn-outline">عرض جميع
+                    الباقات ←</a></div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header"><span class="section-label">كيف نعمل</span>
+                <h2>رحلتك مع <span class="text-primary">ميدورا</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="journey-steps">
+                <div class="journey-step">
+                    <div class="journey-number">1</div>
+                    <h4>استشارة مجانية</h4>
+                    <p>أخبرنا باحتياجاتك.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-number">2</div>
+                    <h4>اختر الباقة</h4>
+                    <p>علاج + فندق + جولات.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-number">3</div>
+                    <h4>التأشيرة والسفر</h4>
+                    <p>نساعدك في الإجراءات.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-number">4</div>
+                    <h4>الوصول لمصر</h4>
+                    <p>استقبال VIP وتسجيل الفندق.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-number">5</div>
+                    <h4>العلاج</h4>
+                    <p>إجراء طبي احترافي ورعاية تعافٍ.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="journey-number">6</div>
+                    <h4>استكشف وعُد</h4>
+                    <p>جولات اختيارية ثم عودة آمنة.</p>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:2.5rem"><a href="contact-ar.html"
+                    class="btn btn-primary btn-lg">ابدأ رحلتي ←</a></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap"><img src="images/logo.png" alt="Medora" style="height:52px;width:auto;filter:brightness(0) invert(1)" /></div>
+                    <p>المنصة الرائدة للسياحة الطبية في مصر.</p>
+                    <div class="social-links"><a href="#">f</a><a href="#">in</a><a href="#">𝕏</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>الصفحات</h4>
+                    <ul>
+                        <li><a href="index-ar.html">الرئيسية</a></li>
+                        <li><a href="treatments-ar.html">العلاجات</a></li>
+                        <li><a href="packages-ar.html">الباقات</a></li>
+                        <li><a href="destinations-ar.html">الوجهات</a></li>
+                        <li><a href="hospitals-ar.html">المستشفيات</a></li>
+                        <li><a href="about-ar.html">من نحن</a></li>
+                        <li><a href="contact-ar.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>الوجهات</h4>
+                    <ul>
+                        <li><a href="destinations-ar.html">القاهرة</a></li>
+                        <li><a href="destinations-ar.html">الغردقة</a></li>
+                        <li><a href="destinations-ar.html">شرم الشيخ</a></li>
+                        <li><a href="destinations-ar.html">الأقصر</a></li>
+                        <li><a href="destinations-ar.html">أسوان</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="rgba(255,255,255,.5)" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg><span>care@medoraegypt.com</span></div><a href="https://wa.me/201000000000"
+                        class="btn btn-accent btn-sm" style="margin-top:.75rem;border-radius:8px" target="_blank">💬
+                        واتساب</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 ميدورا للسياحة الطبية. جميع الحقوق محفوظة.</span><a
+                    href="index.html" style="color:rgba(255,255,255,.5)">English</a></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"
+        style="left:2rem;right:auto"><svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg></a>
+    <script>window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20) }); function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open') }</script>
+</body>
+
+</html>

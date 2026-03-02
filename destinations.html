@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinations — Medora Egypt</title>
+    <meta name="description"
+        content="Explore Egypt's 8 medical tourism destinations: Cairo, Alexandria, Hurghada, Sharm El Sheikh, Luxor, Aswan, Fayoum, and Ain Sokhna." />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .dest-card {
+            background: #fff;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--clr-border);
+            transition: var(--transition)
+        }
+
+        .dest-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg)
+        }
+
+        .dest-head {
+            padding: 1.75rem;
+            background: linear-gradient(135deg, var(--clr-navy), #1a4a8f);
+            position: relative;
+            overflow: hidden
+        }
+
+        .dest-emoji {
+            font-size: 3.5rem;
+            margin-bottom: .5rem;
+            display: block
+        }
+
+        .dest-head h3 {
+            color: #fff;
+            margin-bottom: .2rem
+        }
+
+        .dest-head .region {
+            color: rgba(255, 255, 255, .62);
+            font-size: .8rem
+        }
+
+        .dest-body {
+            padding: 1.4rem 1.75rem
+        }
+
+        .dest-body p {
+            font-size: .86rem;
+            margin-bottom: .9rem
+        }
+
+        .dest-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .4rem;
+            margin-bottom: .9rem
+        }
+
+        .dest-stats {
+            display: flex;
+            gap: 1.5rem;
+            border-top: 1px solid var(--clr-border);
+            padding-top: .9rem
+        }
+
+        .dstat strong {
+            display: block;
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--clr-primary)
+        }
+
+        .dstat span {
+            font-size: .7rem;
+            color: var(--clr-slate)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="egypt-strip"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Medora Medical Tourism" style="height:64px;width:auto;display:block" /></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="destinations.html" class="active">Destinations</a></li>
+                <li><a href="hospitals.html">Hospitals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:.75rem" class="hide-mobile"><a href="destinations-ar.html"
+                    class="lang-switcher">🌐 العربية</a><a href="https://wa.me/201000000000" target="_blank"
+                    class="btn btn-accent btn-sm">💬 WhatsApp</a><a href="contact.html"
+                    class="btn btn-primary btn-sm">Free Quote</a></div>
+            <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="treatments.html">Treatments</a><a
+            href="packages.html">Packages</a><a href="destinations.html">Destinations</a><a
+            href="hospitals.html">Hospitals</a><a href="about.html">About</a><a href="contact.html">Contact</a><a
+            href="destinations-ar.html">🌐 العربية</a><a href="contact.html" class="btn btn-primary"
+            style="text-align:center">Free Quote</a></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span
+                        class="current">Destinations</span></div>
+                <h1 class="serif">8 Egyptian Destinations</h1>
+                <p>From the Pyramids of Cairo to the coral reefs of Hurghada — choose where you'll heal, explore, and be
+                    transformed.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header"><span class="section-label">All Destinations</span>
+                <h2>Where Will You <span class="text-primary">Experience Egypt?</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-2" style="align-items:start">
+                <div class="dest-card">
+                    <div class="dest-head"><span class="dest-emoji">🏙️</span>
+                        <h3>Cairo</h3>
+                        <div class="region">📍 Capital · Nile Delta</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>Egypt's capital is the medical hub of the Middle East. Cairo hosts the country's most
+                            advanced hospitals, internationally certified specialists, and robust international patient
+                            infrastructure. Combine treatment with the Pyramids, the Egyptian Museum, the Nile, and Old
+                            Cairo's bazaars.</p>
+                        <div class="dest-tags"><span class="tag">🏥 Medical Hub</span><span class="tag green">All
+                                Treatments</span><span class="tag gold">🏺 Ancient Sites</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>15+</strong><span>Partner Hospitals</span></div>
+                            <div class="dstat"><strong>All</strong><span>Specialities</span></div>
+                            <div class="dstat"><strong>Year-Round</strong><span>Ideal to Visit</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#064e3b,#0faa6e)"><span
+                            class="dest-emoji">🐠</span>
+                        <h3>Hurghada</h3>
+                        <div class="region">📍 Red Sea Governorate</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>Hurghada is Medora's premier recovery destination — 5-star beach resorts minutes from
+                            cosmetic and dental clinics. The warm Red Sea climate is ideal for post-op healing.
+                            World-class diving and snorkelling for those cleared for activity.</p>
+                        <div class="dest-tags"><span class="tag">✨ Cosmetic</span><span class="tag">🦷
+                                Dental</span><span class="tag green">🌊 Red Sea</span><span class="tag gold">🤿
+                                Diving</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>5+</strong><span>Partner Hospitals</span></div>
+                            <div class="dstat"><strong>Cosmetic &amp; Dental</strong><span>Speciality Focus</span></div>
+                            <div class="dstat"><strong>Oct–May</strong><span>Best Season</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#065f46,#10b981)"><span
+                            class="dest-emoji">🏖️</span>
+                        <h3>Sharm El Sheikh</h3>
+                        <div class="region">📍 South Sinai</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>Club-class 5-star resorts at the tip of the Sinai peninsula. Sharm International Hospital
+                            provides full cosmetic and orthopaedic services for international patients — with
+                            resort-to-clinic transfers arranged by Medora. Exceptional for wellness retreats and spa
+                            recovery.</p>
+                        <div class="dest-tags"><span class="tag">🌿 Wellness</span><span class="tag">✨
+                                Cosmetic</span><span class="tag green">🏖️ Beach</span><span class="tag gold">🌅
+                                Sunsets</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>3+</strong><span>Partner Facilities</span></div>
+                            <div class="dstat"><strong>Wellness &amp; Cosmetic</strong><span>Speciality</span></div>
+                            <div class="dstat"><strong>Sep–Jun</strong><span>Best Season</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#004e92,#1a6fbf)"><span
+                            class="dest-emoji">🌊</span>
+                        <h3>Alexandria</h3>
+                        <div class="region">📍 Mediterranean Coast</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>The "Pearl of the Mediterranean" offers a relaxed European-style coastal setting with
+                            Alexandria International Hospital — one of Egypt's top dental and fertility centres. Walk
+                            the Corniche, visit the Bibliotheca Alexandrina, and enjoy superb Mediterranean seafood
+                            during recovery.</p>
+                        <div class="dest-tags"><span class="tag">🦷 Dental</span><span class="tag">🌱
+                                Fertility</span><span class="tag green">🌊 Mediterranean</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>3+</strong><span>Partner Hospitals</span></div>
+                            <div class="dstat"><strong>Dental &amp; Fertility</strong><span>Speciality</span></div>
+                            <div class="dstat"><strong>Apr–Oct</strong><span>Best Season</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#92400e,#d97706)"><span
+                            class="dest-emoji">🏛️</span>
+                        <h3>Luxor</h3>
+                        <div class="region">📍 Upper Egypt · Nile Valley</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>The world's greatest open-air museum. Luxor health retreats are ideal for post-dental or
+                            light post-op recovery — calm Nile-side hotels, hot air balloon flights at sunrise, and
+                            private guided tours of Karnak and the Valley of the Kings.</p>
+                        <div class="dest-tags"><span class="tag gold">🏺 Ancient Egypt</span><span class="tag">🌿
+                                Wellness</span><span class="tag green">⛵ Nile</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>2</strong><span>Partner Clinics</span></div>
+                            <div class="dstat"><strong>Recovery &amp; Wellness</strong><span>Speciality</span></div>
+                            <div class="dstat"><strong>Oct–Apr</strong><span>Best Season</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#1e1b4b,#4338ca)"><span
+                            class="dest-emoji">⛵</span>
+                        <h3>Aswan</h3>
+                        <div class="region">📍 Upper Egypt · Nubia</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>Egypt's most tranquil destination — where Nile feluccas drift past granite temples and Nubian
+                            villages. Aswan Nile cruise packages allow patients to recover in pure relaxation. The dry
+                            warm climate is particularly therapeutic for respiratory and post-surgical recovery.</p>
+                        <div class="dest-tags"><span class="tag gold">🌅 Nubia</span><span class="tag">🌿
+                                Recovery</span><span class="tag green">⛵ Nile Cruise</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>1+</strong><span>Partner Clinic</span></div>
+                            <div class="dstat"><strong>Wellness &amp; Recovery</strong><span>Speciality</span></div>
+                            <div class="dstat"><strong>Nov–Mar</strong><span>Best Season</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#064e3b,#065f46)"><span
+                            class="dest-emoji">🌿</span>
+                        <h3>Fayoum</h3>
+                        <div class="region">📍 Western Desert Oasis</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>Egypt's largest natural oasis — birdwatching at Wadi El-Rayan, desert hot springs, and the
+                            stunning Lake Qarun. Fayoum resorts are ideal for meditative post-op recovery and holistic
+                            wellness programs away from urban noise.</p>
+                        <div class="dest-tags"><span class="tag gold">🌿 Eco-Wellness</span><span class="tag">🏔️
+                                Desert</span><span class="tag green">🐦 Birdwatching</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>Eco-Resort</strong><span>Accommodation</span></div>
+                            <div class="dstat"><strong>Wellness Focus</strong><span>Speciality</span></div>
+                            <div class="dstat"><strong>Oct–Apr</strong><span>Best Season</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#0284c7,#38bdf8)"><span
+                            class="dest-emoji">🌅</span>
+                        <h3>Ain Sokhna</h3>
+                        <div class="region">📍 Red Sea · Near Cairo</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>Just 1.5 hours from Cairo International Airport, Ain Sokhna is Cairo patients' fast escape to
+                            the Red Sea — luxury private chalets, calm beaches, and excellent Arabic seafood. Ideal for
+                            a short post-procedure rest before flying home.</p>
+                        <div class="dest-tags"><span class="tag">🌊 Red Sea</span><span class="tag">🏖️
+                                Beach</span><span class="tag green">🚗 Near Cairo</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>Resort</strong><span>Accommodation</span></div>
+                            <div class="dstat"><strong>Short-Stay Recovery</strong><span>Speciality</span></div>
+                            <div class="dstat"><strong>Year-Round</strong><span>Ideal to Visit</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:3rem"><a href="contact.html" class="btn btn-primary btn-lg">Build
+                    My Egypt Package →</a></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap"><img src="images/logo.png" alt="Medora" style="height:52px;width:auto;filter:brightness(0) invert(1)" /></div>
+                    <p>Egypt's premier medical tourism platform.</p>
+                    <div class="social-links"><a href="#">f</a><a href="#">in</a><a href="#">𝕏</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="treatments.html">Treatments</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="hospitals.html">Hospitals</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Destinations</h4>
+                    <ul>
+                        <li><a href="destinations.html">Cairo</a></li>
+                        <li><a href="destinations.html">Hurghada</a></li>
+                        <li><a href="destinations.html">Sharm El Sheikh</a></li>
+                        <li><a href="destinations.html">Luxor</a></li>
+                        <li><a href="destinations.html">Aswan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="rgba(255,255,255,.5)" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg><span>care@medoraegypt.com</span></div><a href="https://wa.me/201000000000"
+                        class="btn btn-accent btn-sm" style="margin-top:.75rem;border-radius:8px" target="_blank">💬
+                        WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 Medora Medical Tourism. All rights reserved.</span><a
+                    href="destinations-ar.html" style="color:rgba(255,255,255,.5)">العربية</a></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><svg
+            viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg></a>
+    <script>window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20) }); function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open') }</script>
+</body>
+
+</html>

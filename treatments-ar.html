@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>العلاجات — ميدورا مصر</title>
+    <meta name="description"
+        content="تصفح العلاجات الطبية في مصر: أسنان، تجميل، عظام، عيون، خصوبة، قلب وصحة عامة في أفضل مستشفيات مصر." />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif
+        }
+
+        .tcard {
+            background: #fff;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--clr-border);
+            transition: var(--transition)
+        }
+
+        .tcard:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg)
+        }
+
+        .tcard-head {
+            padding: 1.75rem 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.1rem
+        }
+
+        .tcard-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 14px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem
+        }
+
+        .tcard-body {
+            padding: 0 2rem 1.5rem
+        }
+
+        .tcard-body p {
+            font-size: .86rem;
+            margin-bottom: .9rem
+        }
+
+        .proc-list {
+            display: flex;
+            flex-direction: column;
+            gap: .38rem
+        }
+
+        .proc-list li {
+            font-size: .8rem;
+            color: var(--clr-slate);
+            display: flex;
+            align-items: center;
+            gap: .45rem
+        }
+
+        .proc-list li::before {
+            content: '✓';
+            color: var(--clr-accent);
+            font-weight: 700;
+            flex-shrink: 0
+        }
+
+        .tcard-foot {
+            padding: 1.1rem 2rem;
+            border-top: 1px solid var(--clr-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: .6rem;
+            background: var(--clr-light)
+        }
+
+        .mpill {
+            background: var(--clr-light);
+            border: 1px solid var(--clr-border);
+            border-radius: 50px;
+            padding: .18rem .7rem;
+            font-size: .72rem;
+            color: var(--clr-slate);
+            font-weight: 500;
+            margin-left: .3rem
+        }
+    </style>
+</head>
+
+<body>
+    <div class="egypt-strip"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index-ar.html" class="nav-logo"><img src="images/logo.png" alt="Medora Medical Tourism" style="height:64px;width:auto;display:block" /></a>
+            <ul class="nav-links">
+                <li><a href="index-ar.html">الرئيسية</a></li>
+                <li><a href="treatments-ar.html" class="active">العلاجات</a></li>
+                <li><a href="packages-ar.html">الباقات</a></li>
+                <li><a href="destinations-ar.html">الوجهات</a></li>
+                <li><a href="hospitals-ar.html">المستشفيات</a></li>
+                <li><a href="about-ar.html">من نحن</a></li>
+                <li><a href="contact-ar.html">اتصل بنا</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:.75rem" class="hide-mobile"><a href="treatments.html"
+                    class="lang-switcher">🌐 English</a><a href="https://wa.me/201000000000" target="_blank"
+                    class="btn btn-accent btn-sm">💬 واتساب</a><a href="contact-ar.html"
+                    class="btn btn-primary btn-sm">استشارة مجانية</a></div>
+            <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index-ar.html">الرئيسية</a><a
+            href="treatments-ar.html">العلاجات</a><a href="packages-ar.html">الباقات</a><a
+            href="destinations-ar.html">الوجهات</a><a href="hospitals-ar.html">المستشفيات</a><a href="about-ar.html">من
+            نحن</a><a href="contact-ar.html">اتصل بنا</a><a href="treatments.html">🌐 English</a><a
+            href="contact-ar.html" class="btn btn-primary" style="text-align:center">استشارة مجانية</a></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb"><span class="current">العلاجات</span><span>›</span><a
+                        href="index-ar.html">الرئيسية</a></div>
+                <h1 class="serif">العلاجات الطبية في مصر</h1>
+                <p>إجراءات عالمية المستوى في أفضل مستشفيات مصر المعتمدة — GAHAR وJCI — بتكلفة أقل بنسبة 50–70% من
+                    أوروبا.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid-2" style="align-items:start">
+                <div class="tcard">
+                    <div class="tcard-head">
+                        <div class="tcard-icon" style="background:#dbeafe">🦷</div>
+                        <div><span class="tag" style="margin-bottom:.4rem;display:inline-block">طب الأسنان</span>
+                            <h3>طب الأسنان والفم</h3>
+                        </div>
+                    </div>
+                    <div class="tcard-body">
+                        <p>تعمل عيادات الأسنان الخاصة في مصر بنفس مواد الجودة الأوروبية — بتكلفة أقل بنسبة 70–80%.</p>
+                        <ul class="proc-list">
+                            <li>قشور الأسنان (E-max / زيركون)</li>
+                            <li>زراعة الأسنان (فردي وكامل القوس)</li>
+                            <li>All-on-4 / All-on-6</li>
+                            <li>علاج العصب</li>
+                            <li>تبييض الأسنان (Zoom وليزر)</li>
+                            <li>تقويم الأسنان (إنفيزالاين وتقليدي)</li>
+                        </ul>
+                    </div>
+                    <div class="tcard-foot">
+                        <div><span class="mpill">💰 وفّر 70–80%</span><span class="mpill">⏱ 5–14 يوم</span></div>
+                        <div><span style="font-size:.75rem;color:var(--clr-slate)">من</span><span
+                                style="font-size:1.3rem;font-weight:800;color:var(--clr-primary)"> 350$</span></div>
+                    </div>
+                </div>
+                <div class="tcard">
+                    <div class="tcard-head">
+                        <div class="tcard-icon" style="background:#fce7f3">✨</div>
+                        <div><span class="tag"
+                                style="background:#fce7f3;color:#be185d;margin-bottom:.4rem;display:inline-block">تجميل</span>
+                            <h3>جراحة التجميل والتشكيل</h3>
+                        </div>
+                    </div>
+                    <div class="tcard-body">
+                        <p>جراحون مصريون حاصلون على شهادات أوروبية وأمريكية في عيادات معتمدة بالقاهرة والغردقة.</p>
+                        <ul class="proc-list">
+                            <li>تجميل الأنف (رينوبلاستي)</li>
+                            <li>شفط الدهون وتشكيل الجسم</li>
+                            <li>تكبير/تصغير الثدي</li>
+                            <li>شد الوجه والرقبة</li>
+                            <li>شد البطن (أبدومينوبلاستي)</li>
+                            <li>زراعة الشعر (FUE)</li>
+                        </ul>
+                    </div>
+                    <div class="tcard-foot">
+                        <div><span class="mpill">💰 وفّر 60–75%</span><span class="mpill">⏱ 1–3 أسابيع</span></div>
+                        <div><span style="font-size:.75rem;color:var(--clr-slate)">من</span><span
+                                style="font-size:1.3rem;font-weight:800;color:var(--clr-primary)"> 900$</span></div>
+                    </div>
+                </div>
+                <div class="tcard">
+                    <div class="tcard-head">
+                        <div class="tcard-icon" style="background:var(--clr-accent-light)">🦴</div>
+                        <div><span class="tag green" style="margin-bottom:.4rem;display:inline-block">عظام</span>
+                            <h3>جراحة العظام والعمود الفقري</h3>
+                        </div>
+                    </div>
+                    <div class="tcard-body">
+                        <p>دار الفؤاد والمستشفيات المرتبطة بكليفلاند كلينيك تقدم استبدال المفاصل الروبوتي مع رعاية ما
+                            بعد الجراحة.</p>
+                        <ul class="proc-list">
+                            <li>استبدال الركبة الكامل (روبوتي)</li>
+                            <li>استبدال مفصل الورك</li>
+                            <li>دمج الفقرات وإصلاح الديسك</li>
+                            <li>إعادة بناء الرباط الصليبي</li>
+                            <li>استبدال مفصل الكتف</li>
+                            <li>12 جلسة علاج طبيعي ما بعد الجراحة</li>
+                        </ul>
+                    </div>
+                    <div class="tcard-foot">
+                        <div><span class="mpill">💰 وفّر 60–70%</span><span class="mpill">⏱ 3–5 أسابيع</span></div>
+                        <div><span style="font-size:.75rem;color:var(--clr-slate)">من</span><span
+                                style="font-size:1.3rem;font-weight:800;color:var(--clr-primary)"> 3,800$</span></div>
+                    </div>
+                </div>
+                <div class="tcard">
+                    <div class="tcard-head">
+                        <div class="tcard-icon" style="background:#ede9fe">👁️</div>
+                        <div><span class="tag"
+                                style="background:#ede9fe;color:#6d28d9;margin-bottom:.4rem;display:inline-block">عيون</span>
+                            <h3>طب وجراحة العيون</h3>
+                        </div>
+                    </div>
+                    <div class="tcard-body">
+                        <p>مستشفيات ماجراباي وواتني للعيون مراكز متميزة إقليميًا لتصحيح الرؤية بالليزر وجراحات الشبكية.
+                        </p>
+                        <ul class="proc-list">
+                            <li>LASIK وLASEK لتصحيح الرؤية</li>
+                            <li>جراحة SMILE بالليزر</li>
+                            <li>جراحة إزالة المياه البيضاء</li>
+                            <li>علاج انفصال الشبكية</li>
+                            <li>علاج الجلوكوما</li>
+                            <li>زرع القرنية</li>
+                        </ul>
+                    </div>
+                    <div class="tcard-foot">
+                        <div><span class="mpill">💰 وفّر 55–65%</span><span class="mpill">⏱ 1–7 أيام</span></div>
+                        <div><span style="font-size:.75rem;color:var(--clr-slate)">من</span><span
+                                style="font-size:1.3rem;font-weight:800;color:var(--clr-primary)"> 480$</span></div>
+                    </div>
+                </div>
+                <div class="tcard">
+                    <div class="tcard-head">
+                        <div class="tcard-icon" style="background:#d1fae5">🌱</div>
+                        <div><span class="tag green" style="margin-bottom:.4rem;display:inline-block">خصوبة</span>
+                            <h3>الخصوبة والطب الإنجابي</h3>
+                        </div>
+                    </div>
+                    <div class="tcard-body">
+                        <p>مراكز IVF المعتمدة دوليًا في القاهرة والإسكندرية بنسب نجاح مقارنة للعيادات الأوروبية بجزء من
+                            التكلفة.</p>
+                        <ul class="proc-list">
+                            <li>دورة IVF / ICSI</li>
+                            <li>تجميد البويضات</li>
+                            <li>تجميد الأجنة وتخزينها</li>
+                            <li>تحليل ومعالجة الحيوانات المنوية</li>
+                            <li>الفحص الجيني PGT-A</li>
+                            <li>تنظير الرحم والبطن</li>
+                        </ul>
+                    </div>
+                    <div class="tcard-foot">
+                        <div><span class="mpill">💰 وفّر 50–65%</span><span class="mpill">⏱ 3–5 أسابيع</span></div>
+                        <div><span style="font-size:.75rem;color:var(--clr-slate)">من</span><span
+                                style="font-size:1.3rem;font-weight:800;color:var(--clr-primary)"> 1,800$</span></div>
+                    </div>
+                </div>
+                <div class="tcard">
+                    <div class="tcard-head">
+                        <div class="tcard-icon" style="background:var(--clr-gold-light)">🌿</div>
+                        <div><span class="tag gold" style="margin-bottom:.4rem;display:inline-block">عافية</span>
+                            <h3>الصحة العامة والتعافي الصحي</h3>
+                        </div>
+                    </div>
+                    <div class="tcard-body">
+                        <p>منتجعات البحر الأحمر المصرية تقدم برامج عافية طبية شاملة تجمع الفحص والعلاج الصحي والمنتجع
+                            الفاخر.</p>
+                        <ul class="proc-list">
+                            <li>الفحص الطبي الشامل للمديرين</li>
+                            <li>علاج IV المضاد للشيخوخة و NAD+</li>
+                            <li>برنامج التحكم في الوزن والتغذية</li>
+                            <li>الحمام المغربي والشفاء التقليدي</li>
+                            <li>العلاج الطبيعي وإدارة الألم</li>
+                            <li>ريتريت الصحة النفسية والتأمل</li>
+                        </ul>
+                    </div>
+                    <div class="tcard-foot">
+                        <div><span class="mpill">💰 وفّر 50–60%</span><span class="mpill">⏱ 7–14 يوم</span></div>
+                        <div><span style="font-size:.75rem;color:var(--clr-slate)">من</span><span
+                                style="font-size:1.3rem;font-weight:800;color:var(--clr-primary)"> 680$</span></div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:3rem"><a href="packages-ar.html" class="btn btn-primary btn-lg">عرض
+                    الباقات الكاملة ←</a><a href="contact-ar.html" class="btn btn-outline" style="margin-right:1rem">خطة
+                    مخصصة</a></div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container" style="max-width:760px">
+            <div class="section-header"><span class="section-label">أسئلة شائعة</span>
+                <h2>أسئلة <span class="text-primary">متكررة</span></h2>
+                <div class="divider"></div>
+            </div>
+            <details open>
+                <summary>هل المستشفيات المصرية عالمية المستوى فعلًا؟</summary>
+                <div class="details-body">نعم. مستشفيات كدار الفؤاد والسلام الدولي وإسكندرية الدولي تحمل اعتمادي GAHAR
+                    وJCI — نفس معايير المملكة المتحدة والإمارات.</div>
+            </details>
+            <details>
+                <summary>كيف أوفّر 50–75% مقارنة بأوروبا؟</summary>
+                <div class="details-body">مثال: طقم كامل من قشور الأسنان يكلف 1,500–2,500 دولار في القاهرة مقابل
+                    12,000–20,000 في المملكة المتحدة. استبدال الركبة 4,000–6,000 دولار مقابل أكثر من 25,000 في الولايات
+                    المتحدة.</div>
+            </details>
+            <details>
+                <summary>هل يمكنني الجمع بين العلاج والسياحة؟</summary>
+                <div class="details-body">بالتأكيد! هذا جوهر ميدورا. نجدول جولات اختيارية حول تعافيك — الأهرام، رحلات
+                    النيل، معابد الأقصر، غطس البحر الأحمر — حسب نوع إجراءك والجدول الزمني.</div>
+            </details>
+            <details>
+                <summary>ماذا يحدث إذا احتجت رعاية متابعة بعد العودة؟</summary>
+                <div class="details-body">جميع باقات ميدورا تشمل برنامج رعاية عن بُعد — استشارات افتراضية مع طبيبك
+                    المصري لمدة 6–12 شهرًا بعد المغادرة.</div>
+            </details>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap"><img src="images/logo.png" alt="Medora" style="height:52px;width:auto;filter:brightness(0) invert(1)" /></div>
+                    <p>المنصة الرائدة للسياحة الطبية في مصر.</p>
+                    <div class="social-links"><a href="#">f</a><a href="#">in</a><a href="#">𝕏</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>الصفحات</h4>
+                    <ul>
+                        <li><a href="index-ar.html">الرئيسية</a></li>
+                        <li><a href="treatments-ar.html">العلاجات</a></li>
+                        <li><a href="packages-ar.html">الباقات</a></li>
+                        <li><a href="destinations-ar.html">الوجهات</a></li>
+                        <li><a href="hospitals-ar.html">المستشفيات</a></li>
+                        <li><a href="about-ar.html">من نحن</a></li>
+                        <li><a href="contact-ar.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>العلاجات</h4>
+                    <ul>
+                        <li><a href="treatments-ar.html">الأسنان</a></li>
+                        <li><a href="treatments-ar.html">التجميل</a></li>
+                        <li><a href="treatments-ar.html">العظام</a></li>
+                        <li><a href="treatments-ar.html">العيون</a></li>
+                        <li><a href="treatments-ar.html">الخصوبة</a></li>
+                        <li><a href="treatments-ar.html">العافية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="rgba(255,255,255,.5)" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg><span>care@medoraegypt.com</span></div><a href="https://wa.me/201000000000"
+                        class="btn btn-accent btn-sm" style="margin-top:.75rem;border-radius:8px" target="_blank">💬
+                        واتساب</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 ميدورا للسياحة الطبية. جميع الحقوق محفوظة.</span><a
+                    href="treatments.html" style="color:rgba(255,255,255,.5)">English</a></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"
+        style="left:2rem;right:auto"><svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg></a>
+    <script>window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20) }); function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open') }</script>
+</body>
+
+</html>

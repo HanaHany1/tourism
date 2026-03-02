@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الباقات — ميدورا مصر</title>
+    <meta name="description"
+        content="باقات سياحة طبية شاملة في مصر: علاج + فندق فاخر + نقل خاص + جولات مصرية بسعر واحد شامل." />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif
+        }
+
+        .pkg-card {
+            background: #fff;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--clr-border);
+            transition: var(--transition)
+        }
+
+        .pkg-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl)
+        }
+
+        .pkg-header {
+            padding: 1.5rem 1.75rem 1rem;
+            background: linear-gradient(135deg, var(--clr-navy), #1a4a8f);
+            position: relative;
+            overflow: hidden
+        }
+
+        .pkg-header h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: .25rem
+        }
+
+        .pkg-header .subtitle {
+            color: rgba(255, 255, 255, .68);
+            font-size: .8rem
+        }
+
+        .pkg-ribbon {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: linear-gradient(135deg, #d4a017, #f59e0b);
+            color: #fff;
+            padding: .22rem .85rem;
+            border-radius: 50px;
+            font-size: .7rem;
+            font-weight: 700
+        }
+
+        .pkg-body {
+            padding: 1.4rem 1.75rem
+        }
+
+        .pkg-include-item {
+            display: flex;
+            align-items: flex-start;
+            gap: .6rem;
+            font-size: .82rem;
+            color: var(--clr-slate);
+            margin-bottom: .4rem
+        }
+
+        .pkg-include-item svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+            width: 14px;
+            height: 14px;
+            stroke: var(--clr-accent)
+        }
+
+        .pkg-footer {
+            padding: 1.1rem 1.75rem;
+            border-top: 1px solid var(--clr-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: .8rem;
+            background: var(--clr-light)
+        }
+
+        .pkg-price .amount {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--clr-primary)
+        }
+
+        .pkg-price .note {
+            font-size: .7rem;
+            color: var(--clr-slate);
+            display: block
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md)
+        }
+
+        .compare-table th {
+            background: var(--clr-navy);
+            color: #fff;
+            padding: .9rem 1.4rem;
+            text-align: right;
+            font-size: .82rem
+        }
+
+        .compare-table td {
+            padding: .85rem 1.4rem;
+            border-bottom: 1px solid var(--clr-border);
+            font-size: .82rem;
+            color: var(--clr-slate)
+        }
+
+        .compare-table tr:last-child td {
+            border-bottom: none
+        }
+
+        .compare-table tr:hover td {
+            background: var(--clr-light)
+        }
+
+        .ck {
+            color: var(--clr-accent);
+            font-weight: 700
+        }
+
+        .cx {
+            color: #ef4444
+        }
+    </style>
+</head>
+
+<body>
+    <div class="egypt-strip"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index-ar.html" class="nav-logo"><img src="images/logo.png" alt="Medora Medical Tourism" style="height:64px;width:auto;display:block" /></a>
+            <ul class="nav-links">
+                <li><a href="index-ar.html">الرئيسية</a></li>
+                <li><a href="treatments-ar.html">العلاجات</a></li>
+                <li><a href="packages-ar.html" class="active">الباقات</a></li>
+                <li><a href="destinations-ar.html">الوجهات</a></li>
+                <li><a href="hospitals-ar.html">المستشفيات</a></li>
+                <li><a href="about-ar.html">من نحن</a></li>
+                <li><a href="contact-ar.html">اتصل بنا</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:.75rem" class="hide-mobile"><a href="packages.html"
+                    class="lang-switcher">🌐 English</a><a href="https://wa.me/201000000000" target="_blank"
+                    class="btn btn-accent btn-sm">💬 واتساب</a><a href="contact-ar.html"
+                    class="btn btn-primary btn-sm">استشارة مجانية</a></div>
+            <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index-ar.html">الرئيسية</a><a
+            href="treatments-ar.html">العلاجات</a><a href="packages-ar.html">الباقات</a><a
+            href="destinations-ar.html">الوجهات</a><a href="hospitals-ar.html">المستشفيات</a><a href="about-ar.html">من
+            نحن</a><a href="contact-ar.html">اتصل بنا</a><a href="packages.html">🌐 English</a><a href="contact-ar.html"
+            class="btn btn-primary" style="text-align:center">استشارة مجانية</a></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb"><span class="current">الباقات</span><span>›</span><a
+                        href="index-ar.html">الرئيسية</a></div>
+                <h1 class="serif">باقات مصر الشاملة</h1>
+                <p>علاج + فندق فاخر + نقل خاص + جولات مصرية اختيارية — بسعر واحد شامل وشفاف بلا رسوم خفية.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header"><span class="section-label accent">جميع الباقات</span>
+                <h2>اختر <span class="text-primary">الباقة المثالية</span></h2>
+                <p>كل باقة قابلة للتخصيص الكامل. <a href="contact-ar.html"
+                        style="color:var(--clr-primary);font-weight:600">تواصل معنا</a> للحصول على عرض مخصص.</p>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="pkg-card">
+                    <div class="pkg-header"><span class="pkg-ribbon">🔥 الأكثر حجزًا</span>
+                        <div style="margin-bottom:.5rem"><span style="font-size:.78rem;color:rgba(255,255,255,.65)">📍
+                                القاهرة</span></div>
+                        <h3>ابتسامة النيل — تجميل أسنان كامل</h3>
+                        <div class="subtitle">مركز دار الفؤاد لطب الأسنان</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem"><span class="tag">🦷
+                                أسنان</span><span class="tag green">8 أيام</span><span class="tag gold">وفّر 78%</span>
+                        </div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>طقم كامل قشور E-max (10–20 وحدة)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>7 ليالٍ فيرمونت نايل سيتي (5★)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>استقبال VIP من مطار القاهرة</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>جميع تنقلات العيادة مع منسّق</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>جولة الأهرام والأبو الهول (اختيارية)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>تأمين السفر الطبي مشمول</div>
+                    </div>
+                    <div class="pkg-footer">
+                        <div class="pkg-price"><span class="note">شامل كليًا من</span><span class="amount">1,490$</span>
+                        </div><a href="contact-ar.html" class="btn btn-primary">احجز الآن</a>
+                    </div>
+                </div>
+                <div class="pkg-card">
+                    <div class="pkg-header" style="background:linear-gradient(135deg,#4a0e2e,#9d174d)"><span
+                            class="pkg-ribbon" style="background:linear-gradient(135deg,#be185d,#ec4899)">✨ الأفضل
+                            اختيارًا</span>
+                        <div style="margin-bottom:.5rem"><span style="font-size:.78rem;color:rgba(255,255,255,.65)">📍
+                                الغردقة</span></div>
+                        <h3>بريق البحر الأحمر — جراحة تجميل</h3>
+                        <div class="subtitle">مستشفى الغردقة الدولي</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem"><span class="tag"
+                                style="background:#fce7f3;color:#be185d">✨ تجميل</span><span class="tag green">14
+                                يومًا</span><span class="tag gold">وفّر 70%</span></div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>تجميل الأنف أو شفط الدهون (اختيار)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>12 ليلة منتجع ستيجنبرجر أكوا ماجيك (5★)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>استقبال VIP من مطار الغردقة</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>دخول مركز السبا اليومي خلال التعافي</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>رحلة غطس/قارب زجاجي (اختيارية)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>3 استشارات متابعة ما بعد الجراحة</div>
+                    </div>
+                    <div class="pkg-footer">
+                        <div class="pkg-price"><span class="note">شامل كليًا من</span><span class="amount">2,890$</span>
+                        </div><a href="contact-ar.html" class="btn btn-primary">احجز الآن</a>
+                    </div>
+                </div>
+                <div class="pkg-card">
+                    <div class="pkg-header">
+                        <div style="margin-bottom:.5rem"><span style="font-size:.78rem;color:rgba(255,255,255,.65)">📍
+                                القاهرة</span></div>
+                        <h3>الحركة الملكية — استبدال مفصل</h3>
+                        <div class="subtitle">مستشفى دار الفؤاد (شريك كليفلاند كلينيك)</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem"><span class="tag green">🦴
+                                عظام</span><span class="tag green">24 يومًا</span><span class="tag gold">وفّر 65%</span>
+                        </div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>استبدال ركبة أو ورك كامل (روبوتي)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>21 ليلة ماريوت مينا هاوس (إطلالة الأهرام)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>12 جلسة علاج طبيعي مشمولة</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>سيارة إسعاف خاصة ونقل يومي للفندق</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>جولة المتحف المصري + عشاء نيلي (اختيارية)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>رعاية عن بُعد 12 شهرًا بعد الجراحة</div>
+                    </div>
+                    <div class="pkg-footer">
+                        <div class="pkg-price"><span class="note">شامل كليًا من</span><span class="amount">4,200$</span>
+                        </div><a href="contact-ar.html" class="btn btn-primary">احجز الآن</a>
+                    </div>
+                </div>
+                <div class="pkg-card">
+                    <div class="pkg-header">
+                        <div style="margin-bottom:.5rem"><span style="font-size:.78rem;color:rgba(255,255,255,.65)">📍
+                                القاهرة</span></div>
+                        <h3>الرؤية الواضحة — LASIK للعيون</h3>
+                        <div class="subtitle">مستشفيات ماجراباي للعيون — القاهرة</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem"><span class="tag"
+                                style="background:#ede9fe;color:#6d28d9">👁 عيون</span><span class="tag green">4
+                                أيام</span><span class="tag gold">وفّر 60%</span></div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>LASIK أو SMILE لتصحيح الرؤية (كلتا العينين)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>3 ليالٍ كمبينسكي نايل هوتل (5★)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>استقبال من المطار + تنقلات العيادة</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>فحص ما قبل الجراحة + 2 متابعة</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>رحلة فلوكة غروب الشمس على النيل (اختيارية)</div>
+                    </div>
+                    <div class="pkg-footer">
+                        <div class="pkg-price"><span class="note">شامل كليًا من</span><span class="amount">890$</span>
+                        </div><a href="contact-ar.html" class="btn btn-primary">احجز الآن</a>
+                    </div>
+                </div>
+                <div class="pkg-card">
+                    <div class="pkg-header"><span class="pkg-ribbon" style="background:var(--clr-accent)">🌿
+                            عافية</span>
+                        <div style="margin-bottom:.5rem"><span style="font-size:.78rem;color:rgba(255,255,255,.65)">📍
+                                شرم الشيخ</span></div>
+                        <h3>سكينة سيناء — ريتريت صحي</h3>
+                        <div class="subtitle">فورسيزونز شرم الشيخ</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem"><span class="tag gold">🌿
+                                عافية</span><span class="tag green">10 أيام</span><span class="tag gold">وفّر 55%</span>
+                        </div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>فحص طبي شامل للمديرين التنفيذيين</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>9 ليالٍ جناح فورسيزونز بإطلالة البحر</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>3 جلسات علاج IV المضاد للشيخوخة</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>يوغا يومي، تدليك وحمام مغربي</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>رحلة غطس في رأس محمد (اختيارية)</div>
+                    </div>
+                    <div class="pkg-footer">
+                        <div class="pkg-price"><span class="note">شامل كليًا من</span><span class="amount">1,980$</span>
+                        </div><a href="contact-ar.html" class="btn btn-primary">احجز الآن</a>
+                    </div>
+                </div>
+                <div class="pkg-card">
+                    <div class="pkg-header"><span class="pkg-ribbon"
+                            style="background:linear-gradient(135deg,#d4a017,#f97316)">👑 VIP</span>
+                        <div style="margin-bottom:.5rem"><span style="font-size:.78rem;color:rgba(255,255,255,.65)">📍
+                                الأقصر + القاهرة</span></div>
+                        <h3>تجديد الفرعون — IVF + رحلة النيل</h3>
+                        <div class="subtitle">مركز الخصوبة الدولي — الإسكندرية</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem"><span class="tag green">🌱
+                                خصوبة</span><span class="tag green">21 يومًا</span><span class="tag gold">وفّر
+                                60%</span></div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>دورة IVF / ICSI كاملة مع PGT-A</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>7 ليالٍ رحلة نيل (الأقصر–أسوان)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>7 ليالٍ كونراد القاهرة (5★)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>جميع التنقلات + منسّق مخصص</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>رحلة بالون الهواء الساخن فوق الأقصر عند الشروق</div>
+                    </div>
+                    <div class="pkg-footer">
+                        <div class="pkg-price"><span class="note">شامل كليًا من</span><span class="amount">4,900$</span>
+                        </div><a href="contact-ar.html" class="btn btn-primary">احجز الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header"><span class="section-label">مقارنة الباقات</span>
+                <h2>مستويات الباقات <span class="text-primary">مقارنة بينها</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div style="overflow-x:auto">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>الميزة</th>
+                            <th>أساسية</th>
+                            <th>بريميوم</th>
+                            <th>VIP النخبة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>العلاج الطبي</td>
+                            <td class="ck">✓ مشمول</td>
+                            <td class="ck">✓ مشمول</td>
+                            <td class="ck">✓ مشمول</td>
+                        </tr>
+                        <tr>
+                            <td>الإقامة الفندقية</td>
+                            <td>فندق 4★</td>
+                            <td>فندق 5★</td>
+                            <td>جناح 5★ / رحلة نيلية</td>
+                        </tr>
+                        <tr>
+                            <td>نقل المطار</td>
+                            <td class="ck">✓ عادي</td>
+                            <td class="ck">✓ خاص</td>
+                            <td class="ck">✓ مرسيدس VIP</td>
+                        </tr>
+                        <tr>
+                            <td>منسّق المريض</td>
+                            <td>ساعات العمل</td>
+                            <td class="ck">✓ 24/7</td>
+                            <td class="ck">✓ 24/7 مخصص</td>
+                        </tr>
+                        <tr>
+                            <td>جولة مصرية</td>
+                            <td class="cx">✗</td>
+                            <td class="ck">✓ جولة واحدة</td>
+                            <td class="ck">✓ 3+ جولات</td>
+                        </tr>
+                        <tr>
+                            <td>منتجع صحي/سبا</td>
+                            <td class="cx">✗</td>
+                            <td class="ck">✓ أساسي</td>
+                            <td class="ck">✓ بريميوم كامل</td>
+                        </tr>
+                        <tr>
+                            <td>رعاية عن بُعد</td>
+                            <td>3 أشهر</td>
+                            <td>6 أشهر</td>
+                            <td>12 شهرًا</td>
+                        </tr>
+                        <tr>
+                            <td><strong>يبدأ من</strong></td>
+                            <td><strong style="color:var(--clr-primary)">500$</strong></td>
+                            <td><strong style="color:var(--clr-primary)">1,800$</strong></td>
+                            <td><strong style="color:var(--clr-primary)">3,500$</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align:center;margin-top:2.5rem"><a href="contact-ar.html"
+                    class="btn btn-primary btn-lg">احصل على عرض مخصص ←</a></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap"><img src="images/logo.png" alt="Medora" style="height:52px;width:auto;filter:brightness(0) invert(1)" /></div>
+                    <p>المنصة الرائدة للسياحة الطبية في مصر.</p>
+                    <div class="social-links"><a href="#">f</a><a href="#">in</a><a href="#">𝕏</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>الصفحات</h4>
+                    <ul>
+                        <li><a href="index-ar.html">الرئيسية</a></li>
+                        <li><a href="treatments-ar.html">العلاجات</a></li>
+                        <li><a href="packages-ar.html">الباقات</a></li>
+                        <li><a href="destinations-ar.html">الوجهات</a></li>
+                        <li><a href="hospitals-ar.html">المستشفيات</a></li>
+                        <li><a href="about-ar.html">من نحن</a></li>
+                        <li><a href="contact-ar.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>أبرز الباقات</h4>
+                    <ul>
+                        <li><a href="packages-ar.html">ابتسامة النيل — أسنان</a></li>
+                        <li><a href="packages-ar.html">بريق البحر الأحمر</a></li>
+                        <li><a href="packages-ar.html">الحركة الملكية — عظام</a></li>
+                        <li><a href="packages-ar.html">الرؤية الواضحة — عيون</a></li>
+                        <li><a href="packages-ar.html">سكينة سيناء</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="rgba(255,255,255,.5)" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg><span>care@medoraegypt.com</span></div><a href="https://wa.me/201000000000"
+                        class="btn btn-accent btn-sm" style="margin-top:.75rem;border-radius:8px" target="_blank">💬
+                        واتساب</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 ميدورا للسياحة الطبية. جميع الحقوق محفوظة.</span><a
+                    href="packages.html" style="color:rgba(255,255,255,.5)">English</a></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"
+        style="left:2rem;right:auto"><svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg></a>
+    <script>window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20) }); function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open') }</script>
+</body>
+
+</html>

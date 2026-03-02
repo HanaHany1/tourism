@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>من نحن — ميدورا مصر</title>
+    <meta name="description"
+        content="تعرف على ميدورا: مهمتنا، رؤيتنا، قيمنا، مسيرتنا وفريقنا في خدمة السياحة الطبية في مصر منذ 2016." />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif
+        }
+
+        .about-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center
+        }
+
+        .about-img-box {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 400px;
+            background: linear-gradient(135deg, var(--clr-primary-light), var(--clr-accent-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10rem;
+            position: relative
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background: #fff;
+            border-radius: var(--radius-md);
+            padding: 1rem 1.4rem;
+            box-shadow: var(--shadow-lg)
+        }
+
+        .about-badge .n {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--clr-primary)
+        }
+
+        .about-badge .l {
+            font-size: .75rem;
+            color: var(--clr-slate)
+        }
+
+        .value-card {
+            padding: 1.75rem;
+            background: #fff;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--clr-border);
+            text-align: center;
+            transition: var(--transition)
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--clr-primary)
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.6rem
+        }
+
+        .timeline {
+            padding-right: 2.5rem;
+            position: relative;
+            max-width: 680px;
+            margin: 0 auto
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            right: .8rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--clr-primary), var(--clr-accent));
+            border-radius: 2px
+        }
+
+        .tl-item {
+            position: relative;
+            margin-bottom: 2.5rem
+        }
+
+        .tl-dot {
+            position: absolute;
+            right: -2.5rem;
+            top: .35rem;
+            width: 18px;
+            height: 18px;
+            background: var(--clr-accent);
+            border: 3px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px var(--clr-accent-light)
+        }
+
+        .tl-year {
+            font-size: .72rem;
+            font-weight: 700;
+            color: var(--clr-primary);
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            margin-bottom: .25rem
+        }
+
+        .team-card {
+            background: #fff;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--clr-border);
+            text-align: center;
+            transition: var(--transition)
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg)
+        }
+
+        .team-av {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem
+        }
+
+        .team-body {
+            padding: 1.2rem
+        }
+
+        .team-body h4 {
+            font-size: .95rem;
+            margin-bottom: .2rem
+        }
+
+        .team-body .role {
+            font-size: .78rem;
+            color: var(--clr-primary);
+            font-weight: 600;
+            margin-bottom: .4rem
+        }
+
+        @media(max-width:768px) {
+            .about-split {
+                grid-template-columns: 1fr
+            }
+
+            .about-img-box {
+                height: 220px;
+                font-size: 6rem
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="egypt-strip"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index-ar.html" class="nav-logo"><img src="images/logo.png" alt="Medora Medical Tourism" style="height:64px;width:auto;display:block" /></a>
+            <ul class="nav-links">
+                <li><a href="index-ar.html">الرئيسية</a></li>
+                <li><a href="treatments-ar.html">العلاجات</a></li>
+                <li><a href="packages-ar.html">الباقات</a></li>
+                <li><a href="destinations-ar.html">الوجهات</a></li>
+                <li><a href="hospitals-ar.html">المستشفيات</a></li>
+                <li><a href="about-ar.html" class="active">من نحن</a></li>
+                <li><a href="contact-ar.html">اتصل بنا</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:.75rem" class="hide-mobile"><a href="about.html"
+                    class="lang-switcher">🌐 English</a><a href="https://wa.me/201000000000" target="_blank"
+                    class="btn btn-accent btn-sm">💬 واتساب</a><a href="contact-ar.html"
+                    class="btn btn-primary btn-sm">استشارة مجانية</a></div>
+            <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index-ar.html">الرئيسية</a><a
+            href="treatments-ar.html">العلاجات</a><a href="packages-ar.html">الباقات</a><a
+            href="destinations-ar.html">الوجهات</a><a href="hospitals-ar.html">المستشفيات</a><a href="about-ar.html">من
+            نحن</a><a href="contact-ar.html">اتصل بنا</a><a href="about.html">🌐 English</a><a href="contact-ar.html"
+            class="btn btn-primary" style="text-align:center">استشارة مجانية</a></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb"><span class="current">من نحن</span><span>›</span><a
+                        href="index-ar.html">الرئيسية</a></div>
+                <h1 class="serif">من نحن — ميدورا</h1>
+                <p>وُلدنا في مصر وبُنينا للعالم. ميدورا تربط المرضى الدوليين بأفضل الرعاية الصحية المصرية — محاطةً
+                    بـ5,000 سنة من العجائب.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="about-split">
+                <div class="about-img-box">🏺<div class="about-badge">
+                        <div class="n">2016</div>
+                        <div class="l">تأسست في القاهرة، مصر</div>
+                    </div>
+                </div>
+                <div>
+                    <span class="section-label" style="margin-bottom:1.2rem;display:inline-flex">قصتنا</span>
+                    <h2 style="margin-bottom:1.1rem">رعاية طبية استثنائية.<br /><span class="text-primary">مصر لا
+                            تُنسى.</span></h2>
+                    <p style="font-size:1rem;line-height:1.85;margin-bottom:1.2rem">أسست ميدورا في القاهرة عام 2016
+                        فريقٌ من المتخصصين الطبيين المصريين ومنسقي المرضى الدوليين وخبراء السياحة، الذين رأوا فرصة
+                        واضحة: <strong style="color:var(--clr-navy)">مستشفيات مصر ذات مستوى عالمي — لكن العالم لا يعرفها
+                            بعد.</strong></p>
+                    <p style="font-size:1rem;line-height:1.85;margin-bottom:2rem">اليوم، ساعدت ميدورا أكثر من 8,000 مريض
+                        من 60+ دولة على تلقّي علاجات طبية حياتية في مصر — مع اكتشاف عجائبها القديمة في الوقت ذاته.</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.1rem">
+                        <div style="padding:1.2rem;background:var(--clr-primary-light);border-radius:var(--radius-sm)">
+                            <strong style="color:var(--clr-primary);font-size:1.4rem;display:block">🎯 المهمة</strong>
+                            <p style="font-size:.85rem;margin-top:.45rem">جعل مصر الوجهة الأكثر ثقة للسياحة الطبية في
+                                العالم — حيث تلتقي الرعاية الاستثنائية بالثقافة الاستثنائية.</p>
+                        </div>
+                        <div style="padding:1.2rem;background:var(--clr-accent-light);border-radius:var(--radius-sm)">
+                            <strong style="color:var(--clr-accent-dark);font-size:1.4rem;display:block">🔭
+                                الرؤية</strong>
+                            <p style="font-size:.85rem;margin-top:.45rem">عالم يستطيع فيه كل مريض الوصول إلى رعاية صحية
+                                عالمية في مصر — بأسعار مناسبة وبأمان وبشكل لا يُنسى.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header"><span class="section-label">قيمنا</span>
+                <h2>ما الذي <span class="text-primary">يحركنا؟</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="value-card">
+                    <div class="value-icon">🛡️</div>
+                    <h4>السلامة فوق كل شيء</h4>
+                    <p>كل مستشفى شريك لميدورا يحمل اعتماد GAHAR — المعيار المصري الوطني المعادل لـJCI. لا تساهل في سلامة
+                        المريض أبدًا.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💎</div>
+                    <h4>الجودة الحقيقية</h4>
+                    <p>نفحص شخصيًا كل مستشفى شريك، نتابع بيانات نتائجه، ونرصد رضا المرضى باستمرار — ليس فقط عند التعاقد.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h4>الدفء المصري</h4>
+                    <p>نستثمر الضيافة المصرية الأسطورية لنقدم تجربة مريض تشعر فيها بأنك في رعاية عائلة.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔍</div>
+                    <h4>الشفافية التامة</h4>
+                    <p>كل سعر شامل ومفصّل. لا رسوم خفية، لا مفاجآت، لا ضغط في البيع — أبدًا.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h4>الوصول العالمي</h4>
+                    <p>ندعم المرضى بأكثر من 15 لغة وتعمل بالشراكة مع وكلاء في أوروبا والخليج وأفريقيا.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🏺</div>
+                    <h4>فخرنا بمصر</h4>
+                    <p>مؤسسة مصرية نُعرّف العالم بكفاءات مصر الطبية وثقافتها وتراثها الاستثنائي بفخر واعتزاز.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header"><span class="section-label">مسيرتنا</span>
+                <h2>محطات <span class="text-primary">ميدورا</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="timeline">
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2016</div>
+                    <h4>التأسيس في القاهرة</h4>
+                    <p>بدأنا بـ5 مستشفيات شريكة في القاهرة وفريق من 10 أشخاص. تركيز على أسنان وتجميل الخليجيين
+                        والأوروبيين.</p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2018</div>
+                    <h4>التوسع للبحر الأحمر</h4>
+                    <p>انطلقنا بعمليات الغردقة وشرم الشيخ. بلغنا 1,000 مريض. شراكات مع فنادق ستيجنبرجر وفورسيزونز.</p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2020</div>
+                    <h4>برنامج تدقيق GAHAR</h4>
+                    <p>أطلقنا بروتوكول التدقيق الحصري الخاص بنا — أول منصة سياحة طبية مصرية تنشر بيانات نتائجها علنًا.
+                    </p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2022</div>
+                    <h4>وجهات صعيد مصر</h4>
+                    <p>أضفنا باقات الأقصر وأسوان مع برامج التعافي على متن سفن النيل. بوابة الرعاية عن بُعد لجميع مرضى
+                        ميدورا.</p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2024</div>
+                    <h4>تقدير WMTA الدولي</h4>
+                    <p>تصنيف ضمن أفضل 100 منصة سياحة طبية عالميًا. بلغنا 6,000 مريض. مكاتب ارتباط أوروبية في لندن
+                        ودوسلدورف.</p>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-year">2026</div>
+                    <h4>أكثر من 8,000 مريض و30+ مستشفى</h4>
+                    <p>توسعنا للفيوم وعين السخنة. ميدورا تغطي اليوم 8 مدن مصرية و30+ مستشفى وتخدم أكثر من 60 دولة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header"><span class="section-label">فريق القيادة</span>
+                <h2>فريق <span class="text-primary">ميدورا</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-4">
+                <div class="team-card">
+                    <div class="team-av"
+                        style="background:linear-gradient(135deg,var(--clr-primary-light),var(--clr-accent-light))">
+                        👨‍⚕️</div>
+                    <div class="team-body">
+                        <h4>د. كريم ناجيب فهمي</h4>
+                        <div class="role">الرئيس التنفيذي والمؤسس المشارك</div>
+                        <p style="font-size:.78rem;color:var(--clr-slate)">رئيس قسم المرضى الدوليين السابق في دار
+                            الفؤاد. ماجستير إدارة أعمال AUC القاهرة، دكتوراه الطب عين شمس.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-av" style="background:linear-gradient(135deg,#fce7f3,#ede9fe)">👩‍💼</div>
+                    <div class="team-body">
+                        <h4>سارة المصري</h4>
+                        <div class="role">مديرة العمليات</div>
+                        <p style="font-size:.78rem;color:var(--clr-slate)">12 عامًا في صناعة السياحة الطبية. مديرة خدمات
+                            المرضى العالمية السابقة في مستشفى السلام الدولي.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-av" style="background:linear-gradient(135deg,var(--clr-accent-light),#d1fae5)">
+                        👨‍💼</div>
+                    <div class="team-body">
+                        <h4>عمر شوكت توفيق</h4>
+                        <div class="role">رئيس جودة المستشفيات</div>
+                        <p style="font-size:.78rem;color:var(--clr-slate)">مدقق GAHAR معتمد. يفحص جميع المنشآت الشريكة
+                            لميدورا الـ30+ سنويًا شخصيًا.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-av"
+                        style="background:linear-gradient(135deg,var(--clr-gold-light),var(--clr-primary-light))">👩‍⚕️
+                    </div>
+                    <div class="team-body">
+                        <h4>د. ليلى مصطفى عيد</h4>
+                        <div class="role">مديرة رعاية المرضى</div>
+                        <p style="font-size:.78rem;color:var(--clr-slate)">جراحة ومحامية مرضى ثنائية اللغة. تشرف على
+                            جميع مسارات الرعاية المعقدة وبرامج التعافي.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-gradient-blue" style="padding:3.5rem 0">
+        <div class="container">
+            <h2 style="color:#fff;text-align:center;margin-bottom:2.5rem">اعتماداتنا <span
+                    style="color:var(--clr-accent)">وعضوياتنا</span></h2>
+            <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:3rem">
+                <div style="text-align:center;color:#fff">
+                    <div style="font-size:2.5rem;margin-bottom:.5rem">🏅</div><strong
+                        style="display:block;font-size:.88rem">عضو WMTA</strong><span
+                        style="font-size:.72rem;opacity:.65">التحالف العالمي للسياحة الطبية</span>
+                </div>
+                <div style="text-align:center;color:#fff">
+                    <div style="font-size:2.5rem;margin-bottom:.5rem">🏛️</div><strong
+                        style="display:block;font-size:.88rem">مدقق GAHAR</strong><span
+                        style="font-size:.72rem;opacity:.65">هيئة الاعتماد الصحي المصرية</span>
+                </div>
+                <div style="text-align:center;color:#fff">
+                    <div style="font-size:2.5rem;margin-bottom:.5rem">🔒</div><strong
+                        style="display:block;font-size:.88rem">ISO 27001</strong><span
+                        style="font-size:.72rem;opacity:.65">معتمد حماية البيانات</span>
+                </div>
+                <div style="text-align:center;color:#fff">
+                    <div style="font-size:2.5rem;margin-bottom:.5rem">🌐</div><strong
+                        style="display:block;font-size:.88rem">جائزة IMTJ 2024</strong><span
+                        style="font-size:.72rem;opacity:.65">أفضل خدمات مريض — مصر</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap"><img src="images/logo.png" alt="Medora" style="height:52px;width:auto;filter:brightness(0) invert(1)" /></div>
+                    <p>المنصة الرائدة للسياحة الطبية في مصر.</p>
+                    <div class="social-links"><a href="#">f</a><a href="#">in</a><a href="#">𝕏</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>الصفحات</h4>
+                    <ul>
+                        <li><a href="index-ar.html">الرئيسية</a></li>
+                        <li><a href="treatments-ar.html">العلاجات</a></li>
+                        <li><a href="packages-ar.html">الباقات</a></li>
+                        <li><a href="destinations-ar.html">الوجهات</a></li>
+                        <li><a href="hospitals-ar.html">المستشفيات</a></li>
+                        <li><a href="about-ar.html">من نحن</a></li>
+                        <li><a href="contact-ar.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>الوجهات</h4>
+                    <ul>
+                        <li><a href="destinations-ar.html">القاهرة</a></li>
+                        <li><a href="destinations-ar.html">الغردقة</a></li>
+                        <li><a href="destinations-ar.html">شرم الشيخ</a></li>
+                        <li><a href="destinations-ar.html">الأقصر</a></li>
+                        <li><a href="destinations-ar.html">أسوان</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="rgba(255,255,255,.5)" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg><span>care@medoraegypt.com</span></div><a href="https://wa.me/201000000000"
+                        class="btn btn-accent btn-sm" style="margin-top:.75rem;border-radius:8px" target="_blank">💬
+                        واتساب</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 ميدورا للسياحة الطبية. جميع الحقوق محفوظة.</span><a
+                    href="about.html" style="color:rgba(255,255,255,.5)">English</a></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"
+        style="left:2rem;right:auto"><svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg></a>
+    <script>window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20) }); function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open') }</script>
+</body>
+
+</html>

@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اتصل بنا — ميدورا مصر</title>
+    <meta name="description"
+        content="تواصل مع ميدورا للحصول على استشارة مجانية في السياحة الطبية بمصر. واتساب، نموذج أو بريد إلكتروني — رد خلال 24 ساعة." />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: start
+        }
+
+        .contact-form-card {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--clr-border)
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem
+        }
+
+        .whatsapp-cta {
+            background: linear-gradient(135deg, #064e3b, #25d366);
+            border-radius: var(--radius-md);
+            padding: 1.6rem 1.75rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.1rem;
+            margin-top: 2rem
+        }
+
+        .whatsapp-cta svg {
+            width: 42px;
+            height: 42px;
+            fill: #fff;
+            flex-shrink: 0;
+            margin-top: .2rem
+        }
+
+        .whatsapp-cta h4 {
+            color: #fff;
+            margin-bottom: .2rem
+        }
+
+        .whatsapp-cta p {
+            color: rgba(255, 255, 255, .8);
+            font-size: .84rem;
+            margin-bottom: .75rem
+        }
+
+        .whatsapp-cta .btn {
+            background: #fff;
+            color: #064e3b;
+            font-weight: 700
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.75rem
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: var(--clr-primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        .info-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--clr-primary)
+        }
+
+        .info-text strong {
+            display: block;
+            font-size: .9rem;
+            color: var(--clr-navy);
+            margin-bottom: .12rem
+        }
+
+        .info-text span {
+            font-size: .84rem;
+            color: var(--clr-slate)
+        }
+
+        .toast {
+            display: none;
+            background: var(--clr-accent);
+            color: #fff;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-sm);
+            font-size: .9rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            text-align: center
+        }
+
+        .channel-card {
+            background: #fff;
+            border-radius: var(--radius-md);
+            padding: 1.6rem;
+            text-align: center;
+            border: 1px solid var(--clr-border);
+            transition: var(--transition)
+        }
+
+        .channel-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--clr-primary)
+        }
+
+        .channel-card .emoji {
+            font-size: 2rem;
+            margin-bottom: .6rem
+        }
+
+        .channel-card h4 {
+            font-size: .92rem;
+            margin-bottom: .3rem
+        }
+
+        @media(max-width:900px) {
+            .contact-layout {
+                grid-template-columns: 1fr
+            }
+
+            .form-row {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="egypt-strip"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index-ar.html" class="nav-logo"><img src="images/logo.png" alt="Medora Medical Tourism" style="height:64px;width:auto;display:block" /></a>
+            <ul class="nav-links">
+                <li><a href="index-ar.html">الرئيسية</a></li>
+                <li><a href="treatments-ar.html">العلاجات</a></li>
+                <li><a href="packages-ar.html">الباقات</a></li>
+                <li><a href="destinations-ar.html">الوجهات</a></li>
+                <li><a href="hospitals-ar.html">المستشفيات</a></li>
+                <li><a href="about-ar.html">من نحن</a></li>
+                <li><a href="contact-ar.html" class="active">اتصل بنا</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:.75rem" class="hide-mobile"><a href="contact.html"
+                    class="lang-switcher">🌐 English</a><a href="https://wa.me/201000000000" target="_blank"
+                    class="btn btn-accent btn-sm">💬 واتساب</a><a href="contact-ar.html"
+                    class="btn btn-primary btn-sm">استشارة مجانية</a></div>
+            <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index-ar.html">الرئيسية</a><a
+            href="treatments-ar.html">العلاجات</a><a href="packages-ar.html">الباقات</a><a
+            href="destinations-ar.html">الوجهات</a><a href="hospitals-ar.html">المستشفيات</a><a href="about-ar.html">من
+            نحن</a><a href="contact-ar.html">اتصل بنا</a><a href="contact.html">🌐 English</a><a href="contact-ar.html"
+            class="btn btn-primary" style="text-align:center">استشارة مجانية</a></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb"><span class="current">اتصل بنا</span><span>›</span><a
+                        href="index-ar.html">الرئيسية</a></div>
+                <h1 class="serif">تحدث مع منسّق ميدورا</h1>
+                <p>منسّق طبي مصري ودود ثنائي اللغة سيرد عليك خلال 24 ساعة — في الغالب خلال 3 ساعات. بلا التزام ولا ضغط.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-form-card">
+                    <h3 style="margin-bottom:.4rem">اطلب استشارة مجانية</h3>
+                    <p style="margin-bottom:2rem;font-size:.88rem">أخبرنا باحتياجاتك الطبية ووجهتك المفضلة في مصر —
+                        سنبني لك عرض باقة شخصي.</p>
+                    <form id="ctaForm" onsubmit="submitForm(event)">
+                        <div class="form-row">
+                            <div class="form-group"><label class="form-label" for="fname">الاسم الأول *</label><input
+                                    type="text" id="fname" class="form-control" placeholder="سارة" required /></div>
+                            <div class="form-group"><label class="form-label" for="lname">اسم العائلة *</label><input
+                                    type="text" id="lname" class="form-control" placeholder="إبراهيم" required /></div>
+                        </div>
+                        <div class="form-group"><label class="form-label" for="email">البريد الإلكتروني *</label><input
+                                type="email" id="email" class="form-control" placeholder="sara@example.com" required />
+                        </div>
+                        <div class="form-group"><label class="form-label" for="phone">واتساب / رقم الهاتف</label><input
+                                type="tel" id="phone" class="form-control" placeholder="+966 50 000 0000" /></div>
+                        <div class="form-group"><label class="form-label" for="country">دولتك *</label><input
+                                type="text" id="country" class="form-control"
+                                placeholder="مثال: السعودية، الإمارات، المملكة المتحدة" required /></div>
+                        <div class="form-row">
+                            <div class="form-group"><label class="form-label" for="treatment">العلاج المطلوب
+                                    *</label><select id="treatment" class="form-control" required>
+                                    <option value="">اختر العلاج…</option>
+                                    <option>🦷 أسنان — قشور/زراعة</option>
+                                    <option>✨ جراحة تجميل</option>
+                                    <option>🦴 عظام — ركبة/ورك</option>
+                                    <option>👁 عيون — LASIK</option>
+                                    <option>🌱 خصوبة — IVF/ICSI</option>
+                                    <option>❤️ قلب</option>
+                                    <option>🌿 عافية وديتوكس</option>
+                                    <option>أخرى — اذكر أدناه</option>
+                                </select></div>
+                            <div class="form-group"><label class="form-label" for="dest">الوجهة المفضلة</label><select
+                                    id="dest" class="form-control">
+                                    <option value="">أي مدينة مصرية</option>
+                                    <option>🏙️ القاهرة</option>
+                                    <option>🌊 الإسكندرية</option>
+                                    <option>🐠 الغردقة</option>
+                                    <option>🏖️ شرم الشيخ</option>
+                                    <option>🏛️ الأقصر</option>
+                                    <option>⛵ أسوان</option>
+                                    <option>🌿 الفيوم</option>
+                                    <option>🌅 عين السخنة</option>
+                                    <option>أنصحوني أنتم</option>
+                                </select></div>
+                        </div>
+                        <div class="form-group"><label class="form-label" for="budget">الميزانية التقريبية
+                                (USD)</label><select id="budget" class="form-control">
+                                <option value="">اختر النطاق…</option>
+                                <option>أقل من 1,000$</option>
+                                <option>1,000$ – 3,000$</option>
+                                <option>3,000$ – 6,000$</option>
+                                <option>6,000$ – 12,000$</option>
+                                <option>أكثر من 12,000$</option>
+                            </select></div>
+                        <div class="form-group"><label class="form-label" for="message">أخبرنا المزيد *</label><textarea
+                                id="message" class="form-control"
+                                placeholder="صِف حالتك الطبية، أسئلتك، تواريخ السفر المفضلة، أو أي شيء آخر يجب أن نعرفه…"
+                                required></textarea></div>
+                        <div class="form-group" style="display:flex;align-items:flex-start;gap:.7rem"><input
+                                type="checkbox" id="consent" required
+                                style="margin-top:3px;accent-color:var(--clr-primary)" /><label for="consent"
+                                style="font-size:.8rem;color:var(--clr-slate);cursor:pointer">أوافق على حفظ بياناتي لدى
+                                ميدورا للرد على استفساري. <a href="#" style="color:var(--clr-primary)">سياسة
+                                    الخصوصية</a>.</label></div>
+                        <button type="submit" class="btn btn-primary"
+                            style="width:100%;justify-content:center;padding:1rem;font-size:1rem">أرسل طلبي ←</button>
+                        <div class="toast" id="toast">✅ تم الاستلام! سيتواصل معك منسّق ميدورا خلال 24 ساعة — وغالبًا في
+                            أقل من ذلك. أهلًا بك! 🇪🇬</div>
+                    </form>
+                </div>
+                <div>
+                    <h3 style="margin-bottom:.5rem">كيف تتواصل معنا</h3>
+                    <p style="margin-bottom:2rem;font-size:.88rem">اختر القناة التي تناسبك. كل الاستفسارات تُعامَل بسرية
+                        تامة من منسّقين ثنائيي اللغة.</p>
+                    <div class="info-item">
+                        <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6.29 6.29l.95-.87a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg></div>
+                        <div class="info-text"><strong>الهاتف والواتساب</strong><span>‎+20 100 000 0000‎<br />دعم
+                                بالعربية والإنجليزية والألمانية والفرنسية</span></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg></div>
+                        <div class="info-text"><strong>البريد الإلكتروني</strong><span>care@medoraegypt.com<br />متوسط
+                                وقت الرد: أقل من 3 ساعات</span></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg></div>
+                        <div class="info-text"><strong>المكاتب</strong><span>القاهرة (المقر) · الإسكندرية · الغردقة ·
+                                شرم الشيخ<br />ارتباط أوروبي: لندن · دوسلدورف</span></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg></div>
+                        <div class="info-text"><strong>ساعات العمل</strong><span>مصر: الأحد–الخميس 9ص–8م · الجمعة–السبت
+                                10ص–6م<br />الواتساب غالبًا مراقَب على مدار الساعة</span></div>
+                    </div>
+                    <div class="whatsapp-cta">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                        </svg>
+                        <div>
+                            <h4>تواصل عبر الواتساب الآن</h4>
+                            <p>إجابات فورية. منسّقون يتحدثون العربية والإنجليزية — في الغالب متاحون خلال دقائق.</p><a
+                                href="https://wa.me/201000000000?text=مرحبًا%20ميدورا!%20أرغب%20في%20الاستفسار%20عن%20باقة%20طبية%20في%20مصر."
+                                class="btn btn-sm" target="_blank" rel="noopener">افتح الواتساب ←</a>
+                        </div>
+                    </div>
+                    <div
+                        style="margin-top:1.75rem;padding:1.4rem;background:var(--clr-light);border-radius:var(--radius-md)">
+                        <h4 style="margin-bottom:.7rem;font-size:.9rem">🌐 اللغات التي ندعمها</h4>
+                        <div style="display:flex;flex-wrap:wrap;gap:.45rem"><span class="tag">العربية</span><span
+                                class="tag">English</span><span class="tag">Deutsch</span><span
+                                class="tag">Français</span><span class="tag">Русский</span><span
+                                class="tag">Italiano</span><span class="tag">Español</span><span
+                                class="tag">Polski</span><span class="tag">Türkçe</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-4" style="margin-top:4rem">
+                <div class="channel-card">
+                    <div class="emoji">📞</div>
+                    <h4>معاودة الاتصال مجانًا</h4>
+                    <p style="font-size:.82rem">اترك رقمك وسنتصل بك خلال ساعتين خلال ساعات العمل.</p>
+                </div>
+                <div class="channel-card">
+                    <div class="emoji">📹</div>
+                    <h4>استشارة بالفيديو</h4>
+                    <p style="font-size:.82rem">احجز مكالمة مجانية عبر Zoom أو Teams في الوقت المناسب لك.</p>
+                </div>
+                <div class="channel-card">
+                    <div class="emoji">📧</div>
+                    <h4>البريد الإلكتروني</h4>
+                    <p style="font-size:.82rem">الاستفسارات المفصّلة: care@medoraegypt.com — نرد خلال 3 ساعات في أيام
+                        العمل.</p>
+                </div>
+                <div class="channel-card">
+                    <div class="emoji">🏥</div>
+                    <h4>موافقة المستشفى المسبقة</h4>
+                    <p style="font-size:.82rem">أرسل لنا سجلك الطبي وسنحصل على عرض سعر مكتوب من المستشفى مباشرة.</p>
+                </div>
+            </div>
+            <div
+                style="background:linear-gradient(135deg,var(--clr-navy),#1a4a8f);border-radius:var(--radius-lg);padding:2.5rem;text-align:center;margin-top:4rem">
+                <h2 style="color:#fff;margin-bottom:.7rem">مكاتب حول مصر</h2>
+                <p style="color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 2rem">منسّقون ميدانيون في كل مدينة
+                    كبرى — لتطمئن أنك لست وحدك أبدًا.</p>
+                <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:1rem"><span
+                        style="background:rgba(255,255,255,.12);border-radius:50px;padding:.4rem 1.1rem;font-size:.85rem;color:#fff">🏙️
+                        القاهرة (المقر)</span><span
+                        style="background:rgba(255,255,255,.12);border-radius:50px;padding:.4rem 1.1rem;font-size:.85rem;color:#fff">🌊
+                        الإسكندرية</span><span
+                        style="background:rgba(255,255,255,.12);border-radius:50px;padding:.4rem 1.1rem;font-size:.85rem;color:#fff">🐠
+                        الغردقة</span><span
+                        style="background:rgba(255,255,255,.12);border-radius:50px;padding:.4rem 1.1rem;font-size:.85rem;color:#fff">🏖️
+                        شرم الشيخ</span><span
+                        style="background:rgba(255,255,255,.12);border-radius:50px;padding:.4rem 1.1rem;font-size:.85rem;color:#fff">🏛️
+                        الأقصر</span><span
+                        style="background:rgba(255,255,255,.12);border-radius:50px;padding:.4rem 1.1rem;font-size:.85rem;color:#fff">⛵
+                        أسوان</span></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap"><img src="images/logo.png" alt="Medora" style="height:52px;width:auto;filter:brightness(0) invert(1)" /></div>
+                    <p>المنصة الرائدة للسياحة الطبية في مصر.</p>
+                    <div class="social-links"><a href="#">f</a><a href="#">in</a><a href="#">𝕏</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>الصفحات</h4>
+                    <ul>
+                        <li><a href="index-ar.html">الرئيسية</a></li>
+                        <li><a href="treatments-ar.html">العلاجات</a></li>
+                        <li><a href="packages-ar.html">الباقات</a></li>
+                        <li><a href="destinations-ar.html">الوجهات</a></li>
+                        <li><a href="hospitals-ar.html">المستشفيات</a></li>
+                        <li><a href="about-ar.html">من نحن</a></li>
+                        <li><a href="contact-ar.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>الوجهات</h4>
+                    <ul>
+                        <li><a href="destinations-ar.html">القاهرة</a></li>
+                        <li><a href="destinations-ar.html">الغردقة</a></li>
+                        <li><a href="destinations-ar.html">شرم الشيخ</a></li>
+                        <li><a href="destinations-ar.html">الأقصر</a></li>
+                        <li><a href="destinations-ar.html">أسوان</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="rgba(255,255,255,.5)" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6.29 6.29l.95-.87a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg><span>‎+20 100 000 0000‎</span></div>
+                    <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="rgba(255,255,255,.5)" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg><span>care@medoraegypt.com</span></div><a href="https://wa.me/201000000000"
+                        class="btn btn-accent btn-sm" style="margin-top:.75rem;border-radius:8px" target="_blank">💬
+                        واتساب</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 ميدورا للسياحة الطبية. جميع الحقوق محفوظة.</span>
+                <div style="display:flex;gap:1.5rem"><a href="#">خصوصية</a><a href="#">الشروط</a><a href="contact.html"
+                        style="color:rgba(255,255,255,.5)">English</a></div>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"
+        style="left:2rem;right:auto"><svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg></a>
+    <script>window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20) }); function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open') } function submitForm(e) { e.preventDefault(); const t = document.getElementById('toast'); t.style.display = 'block'; document.getElementById('ctaForm').reset(); t.scrollIntoView({ behavior: 'smooth', block: 'center' }) }</script>
+</body>
+
+</html>

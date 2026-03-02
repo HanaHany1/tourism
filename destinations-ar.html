@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الوجهات — ميدورا مصر</title>
+    <meta name="description"
+        content="استكشف وجهات السياحة الطبية في مصر: القاهرة، الإسكندرية، الغردقة، شرم الشيخ، الأقصر، أسوان، الفيوم، وعين السخنة." />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif
+        }
+
+        .dest-card {
+            background: #fff;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--clr-border);
+            transition: var(--transition)
+        }
+
+        .dest-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg)
+        }
+
+        .dest-head {
+            padding: 1.75rem;
+            background: linear-gradient(135deg, var(--clr-navy), #1a4a8f)
+        }
+
+        .dest-emoji {
+            font-size: 3rem;
+            margin-bottom: .5rem;
+            display: block
+        }
+
+        .dest-head h3 {
+            color: #fff;
+            margin-bottom: .2rem
+        }
+
+        .dest-head .region {
+            color: rgba(255, 255, 255, .62);
+            font-size: .8rem
+        }
+
+        .dest-body {
+            padding: 1.4rem 1.75rem
+        }
+
+        .dest-body p {
+            font-size: .86rem;
+            margin-bottom: .9rem
+        }
+
+        .dest-stats {
+            display: flex;
+            gap: 1.5rem;
+            border-top: 1px solid var(--clr-border);
+            padding-top: .9rem
+        }
+
+        .dstat strong {
+            display: block;
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--clr-primary)
+        }
+
+        .dstat span {
+            font-size: .7rem;
+            color: var(--clr-slate)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="egypt-strip"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index-ar.html" class="nav-logo"><img src="images/logo.png" alt="Medora Medical Tourism" style="height:64px;width:auto;display:block" /></a>
+            <ul class="nav-links">
+                <li><a href="index-ar.html">الرئيسية</a></li>
+                <li><a href="treatments-ar.html">العلاجات</a></li>
+                <li><a href="packages-ar.html">الباقات</a></li>
+                <li><a href="destinations-ar.html" class="active">الوجهات</a></li>
+                <li><a href="hospitals-ar.html">المستشفيات</a></li>
+                <li><a href="about-ar.html">من نحن</a></li>
+                <li><a href="contact-ar.html">اتصل بنا</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:.75rem" class="hide-mobile"><a href="destinations.html"
+                    class="lang-switcher">🌐 English</a><a href="https://wa.me/201000000000" target="_blank"
+                    class="btn btn-accent btn-sm">💬 واتساب</a><a href="contact-ar.html"
+                    class="btn btn-primary btn-sm">استشارة مجانية</a></div>
+            <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index-ar.html">الرئيسية</a><a
+            href="treatments-ar.html">العلاجات</a><a href="packages-ar.html">الباقات</a><a
+            href="destinations-ar.html">الوجهات</a><a href="hospitals-ar.html">المستشفيات</a><a href="about-ar.html">من
+            نحن</a><a href="contact-ar.html">اتصل بنا</a><a href="destinations.html">🌐 English</a><a
+            href="contact-ar.html" class="btn btn-primary" style="text-align:center">استشارة مجانية</a></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb"><span class="current">الوجهات</span><span>›</span><a
+                        href="index-ar.html">الرئيسية</a></div>
+                <h1 class="serif">8 وجهات مصرية فريدة</h1>
+                <p>من الأهرامات في القاهرة إلى شعاب المرجان في الغردقة — اختر أين ستتعافى وتستكشف وتنبهر.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header"><span class="section-label">جميع الوجهات</span>
+                <h2>أين ستختبر <span class="text-primary">سحر مصر؟</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-2" style="align-items:start">
+                <div class="dest-card">
+                    <div class="dest-head"><span class="dest-emoji">🏙️</span>
+                        <h3>القاهرة</h3>
+                        <div class="region">📍 العاصمة · دلتا النيل</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>العاصمة المصرية تُعدّ مركز السياحة الطبية في الشرق الأوسط. تضم القاهرة أكثر المستشفيات تطورًا
+                            في البلاد، وأطباء متخصصين حاصلين على شهادات دولية. اجمع علاجك مع الأهرام والمتحف المصري وخان
+                            الخليلي.</p>
+                        <div class="dest-tags" style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.9rem"><span
+                                class="tag">🏥 مركز طبي</span><span class="tag green">جميع التخصصات</span><span
+                                class="tag gold">🏺 مواقع أثرية</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>+15</strong><span>مستشفى شريك</span></div>
+                            <div class="dstat"><strong>الكل</strong><span>التخصصات</span></div>
+                            <div class="dstat"><strong>طوال العام</strong><span>موسم الزيارة</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#064e3b,#0faa6e)"><span
+                            class="dest-emoji">🐠</span>
+                        <h3>الغردقة</h3>
+                        <div class="region">📍 محافظة البحر الأحمر</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>وجهة التعافي الأولى لدى ميدورا — منتجعات شاطئية فاخرة على بُعد دقائق من عيادات التجميل
+                            والأسنان. مناخ البحر الأحمر الدافئ مثالي للشفاء ما بعد العملية. غطس وسنوركلة عالميّا المستوى
+                            لمن أُجيز لهم النشاط.</p>
+                        <div class="dest-tags" style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.9rem"><span
+                                class="tag">✨ تجميل</span><span class="tag">🦷 أسنان</span><span class="tag green">🌊
+                                البحر الأحمر</span><span class="tag gold">🤿 غطس</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>+5</strong><span>مستشفى شريك</span></div>
+                            <div class="dstat"><strong>تجميل وأسنان</strong><span>التخصص</span></div>
+                            <div class="dstat"><strong>أكتوبر–مايو</strong><span>أفضل الأوقات</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#065f46,#10b981)"><span
+                            class="dest-emoji">🏖️</span>
+                        <h3>شرم الشيخ</h3>
+                        <div class="region">📍 جنوب سيناء</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>منتجعات 5 نجوم بعيدة عن صخب المدينة على طرف شبه جزيرة سيناء. مستشفى شرم الدولي يوفر خدمات
+                            طبية شاملة للمرضى الدوليين، بينما تقدم ميدورا نقلًا من المنتجع للعيادة. وجهة مثالية لريتريت
+                            العافية والاسترخاء.</p>
+                        <div class="dest-tags" style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.9rem"><span
+                                class="tag">🌿 عافية</span><span class="tag">✨ تجميل</span><span class="tag green">🏖️
+                                شاطئ</span><span class="tag gold">🌅 غروب</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>+3</strong><span>منشآت شريكة</span></div>
+                            <div class="dstat"><strong>عافية وتجميل</strong><span>التخصص</span></div>
+                            <div class="dstat"><strong>سبتمبر–يونيو</strong><span>أفضل الأوقات</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#004e92,#1a6fbf)"><span
+                            class="dest-emoji">🌊</span>
+                        <h3>الإسكندرية</h3>
+                        <div class="region">📍 الساحل المتوسطي</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>"لؤلؤة البحر المتوسط" توفر بيئة ساحلية هادئة تحمل طابعًا أوروبيًا، مع مستشفى الإسكندرية
+                            الدولي — أحد أفضل مراكز أسنان وخصوبة مصر. اشفَ وأنت تتجول على كورنيش الإسكندرية وتزور مكتبة
+                            الإسكندرية.</p>
+                        <div class="dest-tags" style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.9rem"><span
+                                class="tag">🦷 أسنان</span><span class="tag">🌱 خصوبة</span><span class="tag green">🌊
+                                متوسطي</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>+3</strong><span>مستشفى شريك</span></div>
+                            <div class="dstat"><strong>أسنان وخصوبة</strong><span>التخصص</span></div>
+                            <div class="dstat"><strong>أبريل–أكتوبر</strong><span>أفضل الأوقات</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#92400e,#d97706)"><span
+                            class="dest-emoji">🏛️</span>
+                        <h3>الأقصر</h3>
+                        <div class="region">📍 صعيد مصر · وادي النيل</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>أكبر متحف مفتوح في العالم. ريتريت الصحة في الأقصر مثالي للتعافي الخفيف ما بعد الأسنان أو
+                            العمليات الصغيرة — فنادق هادئة على ضفاف النيل، رحلات بالون الهواء الساخن، وجولات خاصة في
+                            الكرنك ووادي الملوك.</p>
+                        <div class="dest-tags" style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.9rem"><span
+                                class="tag gold">🏺 آثار مصرية</span><span class="tag">🌿 عافية</span><span
+                                class="tag green">⛵ النيل</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>2</strong><span>عيادة شريكة</span></div>
+                            <div class="dstat"><strong>تعافٍ وعافية</strong><span>التخصص</span></div>
+                            <div class="dstat"><strong>أكتوبر–أبريل</strong><span>أفضل الأوقات</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#1e1b4b,#4338ca)"><span
+                            class="dest-emoji">⛵</span>
+                        <h3>أسوان</h3>
+                        <div class="region">📍 صعيد مصر · النوبة</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>الوجهة المصرية الأكثر هدوءًا — حيث تتسلل فلوكات النيل أمام المعابد الجرانيتية والقرى النوبية.
+                            باقات رحلات النيل من أسوان للأقصر تتيح للمرضى التعافي في طمأنينة كاملة.</p>
+                        <div class="dest-tags" style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.9rem"><span
+                                class="tag gold">🌅 النوبة</span><span class="tag">🌿 تعافٍ</span><span
+                                class="tag green">⛵ رحلة نيلية</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>1+</strong><span>عيادة شريكة</span></div>
+                            <div class="dstat"><strong>عافية وتعافٍ</strong><span>التخصص</span></div>
+                            <div class="dstat"><strong>نوفمبر–مارس</strong><span>أفضل الأوقات</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#064e3b,#065f46)"><span
+                            class="dest-emoji">🌿</span>
+                        <h3>الفيوم</h3>
+                        <div class="region">📍 الصحراء الغربية</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>أكبر واحة طبيعية في مصر — مراقبة الطيور في وادي الريان، ينابيع حارة صحراوية، وبحيرة قارون
+                            الخلابة. منتجعات الفيوم مثالية للتعافي التأملي الهادئ.</p>
+                        <div class="dest-tags" style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.9rem"><span
+                                class="tag gold">🌿 إيكو-عافية</span><span class="tag">🏔️ صحراء</span><span
+                                class="tag green">🐦 مراقبة الطيور</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>إيكو-منتجع</strong><span>الإقامة</span></div>
+                            <div class="dstat"><strong>عافية</strong><span>التخصص</span></div>
+                            <div class="dstat"><strong>أكتوبر–أبريل</strong><span>أفضل الأوقات</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dest-head" style="background:linear-gradient(135deg,#0284c7,#38bdf8)"><span
+                            class="dest-emoji">🌅</span>
+                        <h3>عين السخنة</h3>
+                        <div class="region">📍 البحر الأحمر · قريبة من القاهرة</div>
+                    </div>
+                    <div class="dest-body">
+                        <p>على بُعد ساعة ونصف فقط من مطار القاهرة الدولي، عين السخنة هي هروب المرضى السريع إلى البحر
+                            الأحمر — شاليهات خاصة فاخرة وشواطئ هادئة ومأكولات بحرية مصرية رائعة. مثالية لاستراحة قصيرة
+                            ما بعد الإجراء.</p>
+                        <div class="dest-tags" style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.9rem"><span
+                                class="tag">🌊 البحر الأحمر</span><span class="tag">🏖️ شاطئ</span><span
+                                class="tag green">🚗 قريبة من القاهرة</span></div>
+                        <div class="dest-stats">
+                            <div class="dstat"><strong>منتجع</strong><span>الإقامة</span></div>
+                            <div class="dstat"><strong>إقامة قصيرة</strong><span>التخصص</span></div>
+                            <div class="dstat"><strong>طوال العام</strong><span>موسم الزيارة</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:3rem"><a href="contact-ar.html" class="btn btn-primary btn-lg">بنِ
+                    باقة مصرية مخصصة ←</a></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap"><img src="images/logo.png" alt="Medora" style="height:52px;width:auto;filter:brightness(0) invert(1)" /></div>
+                    <p>المنصة الرائدة للسياحة الطبية في مصر.</p>
+                    <div class="social-links"><a href="#">f</a><a href="#">in</a><a href="#">𝕏</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>الصفحات</h4>
+                    <ul>
+                        <li><a href="index-ar.html">الرئيسية</a></li>
+                        <li><a href="treatments-ar.html">العلاجات</a></li>
+                        <li><a href="packages-ar.html">الباقات</a></li>
+                        <li><a href="destinations-ar.html">الوجهات</a></li>
+                        <li><a href="hospitals-ar.html">المستشفيات</a></li>
+                        <li><a href="about-ar.html">من نحن</a></li>
+                        <li><a href="contact-ar.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>الوجهات</h4>
+                    <ul>
+                        <li><a href="destinations-ar.html">القاهرة</a></li>
+                        <li><a href="destinations-ar.html">الغردقة</a></li>
+                        <li><a href="destinations-ar.html">شرم الشيخ</a></li>
+                        <li><a href="destinations-ar.html">الأقصر</a></li>
+                        <li><a href="destinations-ar.html">أسوان</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="rgba(255,255,255,.5)" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg><span>care@medoraegypt.com</span></div><a href="https://wa.me/201000000000"
+                        class="btn btn-accent btn-sm" style="margin-top:.75rem;border-radius:8px" target="_blank">💬
+                        واتساب</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 ميدورا للسياحة الطبية. جميع الحقوق محفوظة.</span><a
+                    href="destinations.html" style="color:rgba(255,255,255,.5)">English</a></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"
+        style="left:2rem;right:auto"><svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg></a>
+    <script>window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20) }); function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open') }</script>
+</body>
+
+</html>

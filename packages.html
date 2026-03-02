@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Packages — Medora Egypt</title>
+    <meta name="description"
+        content="All-inclusive medical tourism packages in Egypt: treatment, luxury hotel, private transfer, and cultural tours at transparent all-in prices." />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .pkg-card {
+            background: #fff;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--clr-border);
+            transition: var(--transition)
+        }
+
+        .pkg-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl)
+        }
+
+        .pkg-header {
+            padding: 1.5rem 1.75rem 1rem;
+            background: linear-gradient(135deg, var(--clr-navy), #1a4a8f);
+            position: relative;
+            overflow: hidden
+        }
+
+        .pkg-header .pyramid-watermark {
+            position: absolute;
+            right: -20px;
+            bottom: -30px;
+            font-size: 8rem;
+            opacity: .06;
+            line-height: 1
+        }
+
+        .pkg-city-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: .3rem;
+            background: rgba(255, 255, 255, .15);
+            color: #fff;
+            padding: .2rem .75rem;
+            border-radius: 50px;
+            font-size: .72rem;
+            font-weight: 600;
+            margin-bottom: .5rem
+        }
+
+        .pkg-header h3 {
+            color: #fff;
+            font-size: 1.15rem;
+            margin-bottom: .25rem
+        }
+
+        .pkg-header .subtitle {
+            color: rgba(255, 255, 255, .68);
+            font-size: .8rem
+        }
+
+        .pkg-ribbon {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, #d4a017, #f59e0b);
+            color: #fff;
+            padding: .22rem .85rem;
+            border-radius: 50px;
+            font-size: .7rem;
+            font-weight: 700
+        }
+
+        .pkg-body {
+            padding: 1.4rem 1.75rem
+        }
+
+        .pkg-include-item {
+            display: flex;
+            align-items: flex-start;
+            gap: .6rem;
+            font-size: .82rem;
+            color: var(--clr-slate);
+            margin-bottom: .4rem
+        }
+
+        .pkg-include-item svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+            width: 14px;
+            height: 14px;
+            stroke: var(--clr-accent)
+        }
+
+        .pkg-footer {
+            padding: 1.1rem 1.75rem;
+            border-top: 1px solid var(--clr-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: .8rem;
+            background: var(--clr-light)
+        }
+
+        .pkg-price .amount {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--clr-primary)
+        }
+
+        .pkg-price .note {
+            font-size: .7rem;
+            color: var(--clr-slate);
+            display: block
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md)
+        }
+
+        .compare-table th {
+            background: var(--clr-navy);
+            color: #fff;
+            padding: .9rem 1.4rem;
+            text-align: left;
+            font-size: .82rem
+        }
+
+        .compare-table td {
+            padding: .85rem 1.4rem;
+            border-bottom: 1px solid var(--clr-border);
+            font-size: .82rem;
+            color: var(--clr-slate)
+        }
+
+        .compare-table tr:last-child td {
+            border-bottom: none
+        }
+
+        .compare-table tr:hover td {
+            background: var(--clr-light)
+        }
+
+        .ck {
+            color: var(--clr-accent);
+            font-weight: 700
+        }
+
+        .cx {
+            color: #ef4444
+        }
+    </style>
+</head>
+
+<body>
+    <div class="egypt-strip"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Medora Medical Tourism" style="height:64px;width:auto;display:block" /></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="packages.html" class="active">Packages</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="hospitals.html">Hospitals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:.75rem" class="hide-mobile"><a href="packages-ar.html"
+                    class="lang-switcher">🌐 العربية</a><a href="https://wa.me/201000000000" target="_blank"
+                    class="btn btn-accent btn-sm">💬 WhatsApp</a><a href="contact.html"
+                    class="btn btn-primary btn-sm">Free Quote</a></div>
+            <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="treatments.html">Treatments</a><a
+            href="packages.html">Packages</a><a href="destinations.html">Destinations</a><a
+            href="hospitals.html">Hospitals</a><a href="about.html">About</a><a href="contact.html">Contact</a><a
+            href="packages-ar.html">🌐 العربية</a><a href="contact.html" class="btn btn-primary"
+            style="text-align:center">Free Quote</a></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span class="current">Packages</span>
+                </div>
+                <h1 class="serif">All-Inclusive Egypt Packages</h1>
+                <p>Treatment + luxury hotel + private transfer + optional Egypt tours — one transparent price, zero
+                    hidden fees.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header"><span class="section-label accent">All Packages</span>
+                <h2>Choose Your <span class="text-primary">Perfect Package</span></h2>
+                <p>Every package is fully customisable. <a href="contact.html"
+                        style="color:var(--clr-primary);font-weight:600">Contact us</a> for a bespoke quote.</p>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="pkg-card">
+                    <div class="pkg-header"><span class="pkg-ribbon">🔥 Most Booked</span>
+                        <div class="pyramid-watermark">🏺</div>
+                        <div class="pkg-city-tag">📍 Cairo</div>
+                        <h3>Nile Smile — Full Dental Makeover</h3>
+                        <div class="subtitle">Dar Al Fouad Dental Centre</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem"><span class="tag">🦷
+                                Dental</span><span class="tag green">8 Days</span><span class="tag gold">Save 78%</span>
+                        </div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Full E-max veneer set (10–20 units)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>7 nights Fairmont Nile City (5★)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>VIP Cairo International Airport pickup</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>All clinic transfers with coordinator</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Optional: Pyramids &amp; Sphinx half-day tour</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Medical travel insurance included</div>
+                    </div>
+                    <div class="pkg-footer">
+                        <div class="pkg-price"><span class="note">All-inclusive from</span><span
+                                class="amount">$1,490</span></div><a href="contact.html" class="btn btn-primary">Book
+                            Now</a>
+                    </div>
+                </div>
+                <div class="pkg-card">
+                    <div class="pkg-header"><span class="pkg-ribbon"
+                            style="background:linear-gradient(135deg,#be185d,#ec4899)">✨ Top Pick</span>
+                        <div class="pyramid-watermark">🌊</div>
+                        <div class="pkg-city-tag">📍 Hurghada</div>
+                        <h3>Red Sea Radiance — Cosmetic Surgery</h3>
+                        <div class="subtitle">Hurghada International Hospital</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem"><span class="tag"
+                                style="background:#fce7f3;color:#be185d">✨ Cosmetic</span><span class="tag green">14
+                                Days</span><span class="tag gold">Save 70%</span></div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Rhinoplasty or liposuction (choice of procedure)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>12 nights Steigenberger Aqua Magic (5★)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Hurghada Airport VIP pickup &amp; transfers</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Daily spa access during recovery</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Optional: Red Sea snorkelling / glass boat</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>3 post-op follow-up consultations</div>
+                    </div>
+                    <div class="pkg-footer">
+                        <div class="pkg-price"><span class="note">All-inclusive from</span><span
+                                class="amount">$2,890</span></div><a href="contact.html" class="btn btn-primary">Book
+                            Now</a>
+                    </div>
+                </div>
+                <div class="pkg-card">
+                    <div class="pkg-header">
+                        <div class="pyramid-watermark">🏛️</div>
+                        <div class="pkg-city-tag">📍 Cairo</div>
+                        <h3>Royal Motion — Joint Replacement</h3>
+                        <div class="subtitle">Dar Al Fouad Hospital (Cleveland Clinic Affiliate)</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem"><span class="tag green">🦴
+                                Orthopedic</span><span class="tag green">24 Days</span><span class="tag gold">Save
+                                65%</span></div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Total knee or hip replacement (robotic-assisted)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>21 nights Marriott Mena House (Pyramid views)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>12 physiotherapy sessions included</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Private ambulance &amp; daily hotel transfers</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Optional: Egyptian Museum + Nile dinner cruise</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>12-month telemedicine aftercare</div>
+                    </div>
+                    <div class="pkg-footer">
+                        <div class="pkg-price"><span class="note">All-inclusive from</span><span
+                                class="amount">$4,200</span></div><a href="contact.html" class="btn btn-primary">Book
+                            Now</a>
+                    </div>
+                </div>
+                <div class="pkg-card">
+                    <div class="pkg-header">
+                        <div class="pyramid-watermark">👁️</div>
+                        <div class="pkg-city-tag">📍 Cairo</div>
+                        <h3>Clear Vision — LASIK Eye Surgery</h3>
+                        <div class="subtitle">Magrabi Eye Hospitals — Cairo</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem"><span class="tag"
+                                style="background:#ede9fe;color:#6d28d9">👁 Eye Surgery</span><span class="tag green">4
+                                Days</span><span class="tag gold">Save 60%</span></div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>LASIK or SMILE laser vision correction (both eyes)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>3 nights Kempinski Nile Hotel (5★)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Airport pickup + clinic transfers</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Pre-op assessment + 2 post-op check-ups</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Optional: Nile Felucca sunset cruise</div>
+                    </div>
+                    <div class="pkg-footer">
+                        <div class="pkg-price"><span class="note">All-inclusive from</span><span
+                                class="amount">$890</span></div><a href="contact.html" class="btn btn-primary">Book
+                            Now</a>
+                    </div>
+                </div>
+                <div class="pkg-card">
+                    <div class="pkg-header"><span class="pkg-ribbon" style="background:var(--clr-accent)">🌿
+                            Wellness</span>
+                        <div class="pyramid-watermark">🌊</div>
+                        <div class="pkg-city-tag">📍 Sharm El Sheikh</div>
+                        <h3>Sinai Serenity — Wellness Retreat</h3>
+                        <div class="subtitle">Four Seasons Sharm El Sheikh</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem"><span class="tag gold">🌿
+                                Wellness</span><span class="tag green">10 Days</span><span class="tag gold">Save
+                                55%</span></div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Executive full-body health screening</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>9 nights Four Seasons sea-view suite</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Anti-aging IV therapy (x3 sessions)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Daily yoga, massage &amp; hammam</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Nutritionist-guided detox meal plan</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Optional: Ras Mohammed snorkelling trip</div>
+                    </div>
+                    <div class="pkg-footer">
+                        <div class="pkg-price"><span class="note">All-inclusive from</span><span
+                                class="amount">$1,980</span></div><a href="contact.html" class="btn btn-primary">Book
+                            Now</a>
+                    </div>
+                </div>
+                <div class="pkg-card">
+                    <div class="pkg-header"><span class="pkg-ribbon"
+                            style="background:linear-gradient(135deg,#d4a017,#f97316)">👑 VIP</span>
+                        <div class="pyramid-watermark">🏺</div>
+                        <div class="pkg-city-tag">📍 Luxor + Cairo</div>
+                        <h3>Pharaoh's Renewal — IVF + Nile Cruise</h3>
+                        <div class="subtitle">Alexandria International Fertility Centre</div>
+                    </div>
+                    <div class="pkg-body">
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem"><span class="tag green">🌱
+                                Fertility</span><span class="tag green">21 Days</span><span class="tag gold">Save
+                                60%</span></div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Full IVF / ICSI cycle with PGT-A</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>7 nights Nile cruise (Luxor to Aswan)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>7 nights Conrad Cairo (5★)</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>All transfers + dedicated coordinator</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Hot air balloon over Luxor at sunrise</div>
+                        <div class="pkg-include-item"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Karnak Temple private guided tour</div>
+                    </div>
+                    <div class="pkg-footer">
+                        <div class="pkg-price"><span class="note">All-inclusive from</span><span
+                                class="amount">$4,900</span></div><a href="contact.html" class="btn btn-primary">Book
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header"><span class="section-label">Compare</span>
+                <h2>Package <span class="text-primary">Tier Comparison</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div style="overflow-x:auto">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Essential</th>
+                            <th>Premium</th>
+                            <th>VIP Elite</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Medical Treatment</td>
+                            <td class="ck">✓ Included</td>
+                            <td class="ck">✓ Included</td>
+                            <td class="ck">✓ Included</td>
+                        </tr>
+                        <tr>
+                            <td>Hotel Accommodation</td>
+                            <td>4★ Hotel</td>
+                            <td>5★ Hotel</td>
+                            <td>5★ Suite / Nile Cruise</td>
+                        </tr>
+                        <tr>
+                            <td>Airport Transfer</td>
+                            <td class="ck">✓ Standard</td>
+                            <td class="ck">✓ Private</td>
+                            <td class="ck">✓ Mercedes VIP</td>
+                        </tr>
+                        <tr>
+                            <td>Patient Coordinator</td>
+                            <td>Business Hours</td>
+                            <td class="ck">✓ 24/7</td>
+                            <td class="ck">✓ 24/7 Dedicated</td>
+                        </tr>
+                        <tr>
+                            <td>Egypt Cultural Tour</td>
+                            <td class="cx">✗</td>
+                            <td class="ck">✓ 1 Tour</td>
+                            <td class="ck">✓ 3+ Tours</td>
+                        </tr>
+                        <tr>
+                            <td>Spa / Wellness Access</td>
+                            <td class="cx">✗</td>
+                            <td class="ck">✓ Basic</td>
+                            <td class="ck">✓ Full Premium</td>
+                        </tr>
+                        <tr>
+                            <td>Travel Insurance</td>
+                            <td class="ck">✓ Basic</td>
+                            <td class="ck">✓ Comprehensive</td>
+                            <td class="ck">✓ Platinum</td>
+                        </tr>
+                        <tr>
+                            <td>Telemedicine Aftercare</td>
+                            <td>3 months</td>
+                            <td>6 months</td>
+                            <td>12 months</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Starting From</strong></td>
+                            <td><strong style="color:var(--clr-primary)">$500</strong></td>
+                            <td><strong style="color:var(--clr-primary)">$1,800</strong></td>
+                            <td><strong style="color:var(--clr-primary)">$3,500</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align:center;margin-top:2.5rem"><a href="contact.html" class="btn btn-primary btn-lg">Get
+                    Custom Quote →</a></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap"><img src="images/logo.png" alt="Medora" style="height:52px;width:auto;filter:brightness(0) invert(1)" /></div>
+                    <p>Egypt's premier medical tourism platform.</p>
+                    <div class="social-links"><a href="#">f</a><a href="#">in</a><a href="#">𝕏</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="treatments.html">Treatments</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="hospitals.html">Hospitals</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Packages</h4>
+                    <ul>
+                        <li><a href="packages.html">Nile Smile — Dental</a></li>
+                        <li><a href="packages.html">Red Sea Radiance</a></li>
+                        <li><a href="packages.html">Royal Motion — Ortho</a></li>
+                        <li><a href="packages.html">Clear Vision — Eye</a></li>
+                        <li><a href="packages.html">Sinai Serenity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="rgba(255,255,255,.5)" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg><span>care@medoraegypt.com</span></div><a href="https://wa.me/201000000000"
+                        class="btn btn-accent btn-sm" style="margin-top:.75rem;border-radius:8px" target="_blank">💬
+                        WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 Medora Medical Tourism. All rights reserved.</span><a
+                    href="packages-ar.html" style="color:rgba(255,255,255,.5)">العربية</a></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><svg
+            viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg></a>
+    <script>window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20) }); function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open') }</script>
+</body>
+
+</html>

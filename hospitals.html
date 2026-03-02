@@ -1,0 +1,443 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospitals â€” Medora Egypt</title>
+    <meta name="description"
+        content="Medora's partner hospitals in Egypt: Dar Al Fouad, As-Salam International, Alexandria International, Magrabi Eye, Hurghada International, and more." />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .hosp-card {
+            background: #fff;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--clr-border);
+            overflow: hidden;
+            transition: var(--transition)
+        }
+
+        .hosp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg)
+        }
+
+        .hosp-header {
+            padding: 1.4rem 1.75rem 1rem;
+            background: linear-gradient(135deg, var(--clr-navy), #1a4a8f);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem
+        }
+
+        .hosp-icon {
+            width: 54px;
+            height: 54px;
+            background: rgba(255, 255, 255, .15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.7rem
+        }
+
+        .hosp-header h3 {
+            color: #fff;
+            font-size: 1.05rem;
+            margin-bottom: .2rem
+        }
+
+        .hosp-header .city {
+            color: rgba(255, 255, 255, .6);
+            font-size: .78rem
+        }
+
+        .hosp-body {
+            padding: 1.2rem 1.75rem
+        }
+
+        .accred-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .35rem;
+            margin-bottom: .9rem
+        }
+
+        .accred-badge {
+            background: var(--clr-accent-light);
+            color: var(--clr-accent-dark);
+            padding: .16rem .65rem;
+            border-radius: 4px;
+            font-size: .68rem;
+            font-weight: 700
+        }
+
+        .hosp-stats {
+            display: flex;
+            gap: 2rem;
+            padding: 1rem 1.75rem;
+            border-top: 1px solid var(--clr-border);
+            background: var(--clr-light)
+        }
+
+        .hstat strong {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--clr-primary);
+            font-weight: 800
+        }
+
+        .hstat span {
+            font-size: .7rem;
+            color: var(--clr-slate)
+        }
+
+        .hosp-footer {
+            padding: .9rem 1.75rem;
+            border-top: 1px solid var(--clr-border);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end
+        }
+    </style>
+</head>
+
+<body>
+    <div class="egypt-strip"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Medora Medical Tourism" style="height:64px;width:auto;display:block" /></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="hospitals.html" class="active">Hospitals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div style="display:flex;gap:.75rem" class="hide-mobile"><a href="https://wa.me/201234567890"
+                    target="_blank" class="btn btn-accent btn-sm">ðŸ’¬ WhatsApp</a><a href="contact.html"
+                    class="btn btn-primary btn-sm">Free Quote</a></div>
+            <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="treatments.html">Treatments</a><a
+            href="packages.html">Packages</a><a href="destinations.html">Destinations</a><a
+            href="hospitals.html">Hospitals</a><a href="about.html">About</a><a href="contact.html">Contact</a><a
+            href="contact.html" class="btn btn-primary" style="text-align:center">Free Quote</a></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb"><a href="index.html">Home</a><span>â€º</span><span
+                        class="current">Hospitals</span></div>
+                <h1 class="serif">Egypt's Finest Medical Centres</h1>
+                <p>30+ partner hospitals â€” all GAHAR &amp; JCI accredited, on-site inspected by Medora, and carefully
+                    selected for clinical excellence and international patient care.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospitals grid -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header"><span class="section-label">Partner Hospitals</span>
+                <h2>Featured <span class="text-primary">Hospital Partners</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-2" style="align-items:start">
+
+                <div class="hosp-card">
+                    <div class="hosp-header">
+                        <div class="hosp-icon">ðŸ¥</div>
+                        <div>
+                            <h3>Dar Al Fouad Hospital</h3>
+                            <div class="city">ðŸ“ 6th of October City, Cairo (Cleveland Clinic Affiliate)</div>
+                        </div>
+                    </div>
+                    <div class="hosp-body">
+                        <div class="accred-row"><span class="accred-badge">GAHAR</span><span
+                                class="accred-badge">JCI</span><span class="accred-badge">ISO 9001</span><span
+                                class="accred-badge">Cleveland Clinic Affiliate</span></div>
+                        <p style="font-size:.84rem">Egypt's most internationally recognised hospital. Specialities:
+                            cardiac surgery, orthopedics (robotic joint replacement), oncology, neurosurgery, and
+                            bariatrics. Features a dedicated International Patient Centre with English-speaking care
+                            navigators.</p>
+                    </div>
+                    <div class="hosp-stats">
+                        <div class="hstat"><strong>800+</strong><span>Specialists</span></div>
+                        <div class="hstat"><strong>99%</strong><span>Satisfaction</span></div>
+                        <div class="hstat"><strong>JCI</strong><span>Accredited</span></div>
+                    </div>
+                    <div class="hosp-footer"><a href="contact.html" class="btn btn-primary btn-sm">Enquire Now</a></div>
+                </div>
+
+                <div class="hosp-card">
+                    <div class="hosp-header">
+                        <div class="hosp-icon">ðŸ¥</div>
+                        <div>
+                            <h3>As-Salam International Hospital</h3>
+                            <div class="city">ðŸ“ Maadi, Cairo</div>
+                        </div>
+                    </div>
+                    <div class="hosp-body">
+                        <div class="accred-row"><span class="accred-badge">GAHAR</span><span
+                                class="accred-badge">JCI</span><span class="accred-badge">OECI</span></div>
+                        <p style="font-size:.84rem">One of Cairo's oldest and most respected private hospitals. Expert
+                            in dentistry, plastic surgery, cardiology, and women's health. Houses a renowned IVF centre
+                            and a fully equipped cancer treatment wing. Voted best hospital for international patients
+                            2022â€“2024.</p>
+                    </div>
+                    <div class="hosp-stats">
+                        <div class="hstat"><strong>500+</strong><span>Specialists</span></div>
+                        <div class="hstat"><strong>98%</strong><span>Satisfaction</span></div>
+                        <div class="hstat"><strong>30K+</strong><span>Int'l Patients</span></div>
+                    </div>
+                    <div class="hosp-footer"><a href="contact.html" class="btn btn-primary btn-sm">Enquire Now</a></div>
+                </div>
+
+                <div class="hosp-card">
+                    <div class="hosp-header">
+                        <div class="hosp-icon">ðŸ¥</div>
+                        <div>
+                            <h3>Alexandria International Hospital</h3>
+                            <div class="city">ðŸ“ Smouha, Alexandria</div>
+                        </div>
+                    </div>
+                    <div class="hosp-body">
+                        <div class="accred-row"><span class="accred-badge">GAHAR</span><span class="accred-badge">ISO
+                                15189</span></div>
+                        <p style="font-size:.84rem">Alexandria's flagship tertiary hospital with a strong reputation for
+                            dentistry, cosmetic surgery, fertility, and general surgery. Conveniently located near the
+                            Mediterranean corniche with a dedicated recovery ward for international patients.</p>
+                    </div>
+                    <div class="hosp-stats">
+                        <div class="hstat"><strong>350+</strong><span>Specialists</span></div>
+                        <div class="hstat"><strong>97%</strong><span>Satisfaction</span></div>
+                        <div class="hstat"><strong>15K+</strong><span>Int'l Patients</span></div>
+                    </div>
+                    <div class="hosp-footer"><a href="contact.html" class="btn btn-primary btn-sm">Enquire Now</a></div>
+                </div>
+
+                <div class="hosp-card">
+                    <div class="hosp-header">
+                        <div class="hosp-icon">ðŸ‘ï¸</div>
+                        <div>
+                            <h3>Magrabi Eye Hospitals &amp; Centers</h3>
+                            <div class="city">ðŸ“ Giza &amp; Cairo (10 branches across Egypt)</div>
+                        </div>
+                    </div>
+                    <div class="hosp-body">
+                        <div class="accred-row"><span class="accred-badge">GAHAR</span><span class="accred-badge">SO
+                                15189</span><span class="accred-badge">ZEISS Centre</span></div>
+                        <p style="font-size:.84rem">The Middle East's largest eye hospital network, headquartered in
+                            Egypt. Specialities: LASIK, SMILE, cataract surgery, corneal transplant, retinal care, and
+                            glaucoma. Equipped with the latest ZEISS diagnostic and surgical platforms in the region.
+                        </p>
+                    </div>
+                    <div class="hosp-stats">
+                        <div class="hstat"><strong>200+</strong><span>Eye Surgeons</span></div>
+                        <div class="hstat"><strong>99%</strong><span>LASIK Success</span></div>
+                        <div class="hstat"><strong>10 Branches</strong><span>Egypt-wide</span></div>
+                    </div>
+                    <div class="hosp-footer"><a href="contact.html" class="btn btn-primary btn-sm">Enquire Now</a></div>
+                </div>
+
+                <div class="hosp-card">
+                    <div class="hosp-header">
+                        <div class="hosp-icon">ðŸ¥</div>
+                        <div>
+                            <h3>Hurghada International Hospital</h3>
+                            <div class="city">ðŸ“ El Mamsha, Hurghada</div>
+                        </div>
+                    </div>
+                    <div class="hosp-body">
+                        <div class="accred-row"><span class="accred-badge">MOH Certified</span><span
+                                class="accred-badge">GAHAR</span></div>
+                        <p style="font-size:.84rem">The premier medical facility on the Red Sea coast. Specialities:
+                            cosmetic surgery, dental implants, emergency care, and dive medicine. Ideally located
+                            minutes from 5-star resort recovery hotels â€” perfectly set up for cosmetic patient packages.
+                        </p>
+                    </div>
+                    <div class="hosp-stats">
+                        <div class="hstat"><strong>120+</strong><span>Specialists</span></div>
+                        <div class="hstat"><strong>96%</strong><span>Satisfaction</span></div>
+                        <div class="hstat"><strong>8K+</strong><span>Int'l Patients</span></div>
+                    </div>
+                    <div class="hosp-footer"><a href="contact.html" class="btn btn-primary btn-sm">Enquire Now</a></div>
+                </div>
+
+                <div class="hosp-card">
+                    <div class="hosp-header">
+                        <div class="hosp-icon">ðŸ¥</div>
+                        <div>
+                            <h3>Sharm International Hospital</h3>
+                            <div class="city">ðŸ“ Naama Bay, Sharm El Sheikh</div>
+                        </div>
+                    </div>
+                    <div class="hosp-body">
+                        <div class="accred-row"><span class="accred-badge">MOH Certified</span><span
+                                class="accred-badge">GAHAR Registered</span></div>
+                        <p style="font-size:.84rem">The largest hospital in South Sinai. Full range of specialities
+                            including cosmetic surgery, orthopaedics, general surgery, and dive accident hyperbaric
+                            medicine. Set up for seamless resort-to-clinic transfers for international patients.</p>
+                    </div>
+                    <div class="hosp-stats">
+                        <div class="hstat"><strong>180+</strong><span>Specialists</span></div>
+                        <div class="hstat"><strong>96%</strong><span>Satisfaction</span></div>
+                        <div class="hstat"><strong>12K+</strong><span>Int'l Patients</span></div>
+                    </div>
+                    <div class="hosp-footer"><a href="contact.html" class="btn btn-primary btn-sm">Enquire Now</a></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header"><span class="section-label">Specialists</span>
+                <h2>Featured <span class="text-primary">Doctors</span></h2>
+                <p>A selection of our most-requested Egyptian specialists â€” all internationally trained and
+                    board-certified.</p>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-4">
+
+                <div class="doctor-card">
+                    <div class="doctor-img"
+                        style="background:linear-gradient(135deg,var(--clr-primary-light),var(--clr-accent-light));font-size:3.5rem">
+                        ðŸ‘¨â€âš•ï¸</div>
+                    <div class="doctor-body">
+                        <h4>Dr. Ahmed Tarek El-Sayed</h4>
+                        <div class="specialty">Plastic &amp; Aesthetic Surgery</div>
+                        <div style="margin:.4rem 0"><span class="cert-badge">EBOPRAS</span><span
+                                class="cert-badge">ISAPS</span><span class="cert-badge">GAHAR</span></div>
+                        <p style="font-size:.76rem;color:var(--clr-slate);margin-bottom:.8rem">20 yrs experience Â·
+                            7,000+ cosmetic procedures Â· Cairo, Dar Al Fouad</p>
+                        <a href="contact.html" class="btn btn-primary btn-sm"
+                            style="width:100%;justify-content:center">Book Consultation</a>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-img" style="background:linear-gradient(135deg,#fce7f3,#ede9fe);font-size:3.5rem">
+                        ðŸ‘©â€âš•ï¸</div>
+                    <div class="doctor-body">
+                        <h4>Dr. Hanan Rashad Khalil</h4>
+                        <div class="specialty">Dentistry &amp; Smile Design</div>
+                        <div style="margin:.4rem 0"><span class="cert-badge">AEStCO</span><span
+                                class="cert-badge">EDA</span><span class="cert-badge">Invisalign Cert.</span></div>
+                        <p style="font-size:.76rem;color:var(--clr-slate);margin-bottom:.8rem">16 yrs experience Â·
+                            10,000+ veneers &amp; implants Â· As-Salam Hospital, Cairo</p>
+                        <a href="contact.html" class="btn btn-primary btn-sm"
+                            style="width:100%;justify-content:center">Book Consultation</a>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-img"
+                        style="background:linear-gradient(135deg,var(--clr-accent-light),#d1fae5);font-size:3.5rem">
+                        ðŸ‘¨â€âš•ï¸</div>
+                    <div class="doctor-body">
+                        <h4>Dr. Mostafa Gamal Hassan</h4>
+                        <div class="specialty">Orthopedic &amp; Spine Surgery</div>
+                        <div style="margin:.4rem 0"><span class="cert-badge">AO Spine</span><span
+                                class="cert-badge">ESSTS</span><span class="cert-badge">Cleveland Aff.</span></div>
+                        <p style="font-size:.76rem;color:var(--clr-slate);margin-bottom:.8rem">24 yrs experience Â·
+                            4,500+ joint replacements Â· Dar Al Fouad Cairo</p>
+                        <a href="contact.html" class="btn btn-primary btn-sm"
+                            style="width:100%;justify-content:center">Book Consultation</a>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-img"
+                        style="background:linear-gradient(135deg,#ede9fe,var(--clr-primary-light));font-size:3.5rem">
+                        ðŸ‘©â€âš•ï¸</div>
+                    <div class="doctor-body">
+                        <h4>Dr. Nadia Samir Badawi</h4>
+                        <div class="specialty">Ophthalmology &amp; LASIK Surgery</div>
+                        <div style="margin:.4rem 0"><span class="cert-badge">EOS</span><span
+                                class="cert-badge">ESCRS</span><span class="cert-badge">ZEISS Certified</span></div>
+                        <p style="font-size:.76rem;color:var(--clr-slate);margin-bottom:.8rem">18 yrs experience Â·
+                            25,000+ laser procedures Â· Magrabi Eye Hospitals</p>
+                        <a href="contact.html" class="btn btn-primary btn-sm"
+                            style="width:100%;justify-content:center">Book Consultation</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust bar -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item"><span class="number">30+</span><span class="label">Partner Hospitals</span></div>
+                <div class="stat-item"><span class="number">100%</span><span class="label">GAHAR Accredited</span></div>
+                <div class="stat-item"><span class="number">500+</span><span class="label">Certified Specialists</span>
+                </div>
+                <div class="stat-item"><span class="number">Annual</span><span class="label">On-Site Inspections</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap"><img src="images/logo.png" alt="Medora" style="height:52px;width:auto;filter:brightness(0) invert(1)" /></div>
+                    <p>Egypt's premier medical tourism platform.</p>
+                    <div class="social-links"><a href="#">f</a><a href="#">in</a><a href="#">ð•</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="treatments.html">Treatments</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="hospitals.html">Hospitals</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hospitals</h4>
+                    <ul>
+                        <li><a href="hospitals.html">Dar Al Fouad</a></li>
+                        <li><a href="hospitals.html">As-Salam Int'l</a></li>
+                        <li><a href="hospitals.html">Alexandria Int'l</a></li>
+                        <li><a href="hospitals.html">Magrabi Eye</a></li>
+                        <li><a href="hospitals.html">Hurghada Int'l</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="rgba(255,255,255,.5)" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg><span>care@medoraegypt.com</span></div><a href="https://wa.me/201000000000"
+                        class="btn btn-accent btn-sm" style="margin-top:.75rem;border-radius:8px" target="_blank">ðŸ’¬
+                        WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>Â© 2026 Medora Medical Tourism. All rights reserved.</span></div>
+        </div>
+    </footer>
+    <a href="https://wa.me/201000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><svg
+            viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg></a>
+    <script>window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20); }); function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }</script>
+</body>
+
+</html>
