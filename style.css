@@ -762,6 +762,99 @@ p {
     margin: .2rem
 }
 
+/* ─── Hospital/Resort Card ─── */
+.hosp-card {
+    background: #fff;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--clr-border);
+    overflow: hidden;
+    transition: var(--transition)
+}
+
+.hosp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg)
+}
+
+.hosp-header {
+    padding: 1.4rem 1.75rem 1rem;
+    background: linear-gradient(135deg, var(--clr-navy), #1a4a8f);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem
+}
+
+.hosp-icon {
+    width: 54px;
+    height: 54px;
+    background: rgba(255, 255, 255, .15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.7rem
+}
+
+.hosp-header h3 {
+    color: #fff;
+    font-size: 1.05rem;
+    margin-bottom: .2rem
+}
+
+.hosp-header .city {
+    color: rgba(255, 255, 255, .6);
+    font-size: .78rem
+}
+
+.hosp-body {
+    padding: 1.2rem 1.75rem
+}
+
+.accred-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem;
+    margin-bottom: .9rem
+}
+
+.accred-badge {
+    background: var(--clr-accent-light);
+    color: var(--clr-accent-dark);
+    padding: .16rem .65rem;
+    border-radius: 4px;
+    font-size: .68rem;
+    font-weight: 700
+}
+
+.hosp-stats {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 1.75rem;
+    border-top: 1px solid var(--clr-border);
+    background: var(--clr-light)
+}
+
+.hstat strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--clr-primary);
+    font-weight: 800
+}
+
+.hstat span {
+    font-size: .7rem;
+    color: var(--clr-slate)
+}
+
+.hosp-footer {
+    padding: .9rem 1.75rem;
+    border-top: 1px solid var(--clr-border);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+}
+
 /* ─── Testimonial ─── */
 .testimonial-card {
     background: #fff;
